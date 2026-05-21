@@ -47,7 +47,7 @@ export function SiteHeader({ active }: SiteHeaderProps) {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden md:flex gap-8 items-center" style={{ fontFamily: "'Catchy Mager', serif" }}>
           {navItems.map((item) => (
             <Link
               key={item.key}
@@ -86,7 +86,7 @@ export function SiteHeader({ active }: SiteHeaderProps) {
       {/* Mobile Nav Overlay */}
       {isOpen && (
         <div className="md:hidden bg-[#fafaf4] border-t border-[#eee8df] py-4 px-6 absolute top-full left-0 w-full shadow-lg z-40 transition-all duration-300">
-          <nav className="flex flex-col gap-4">
+          <nav className="flex flex-col gap-4" style={{ fontFamily: "'Catchy Mager', serif" }}>
             {navItems.map((item) => (
               <Link
                 key={item.key}

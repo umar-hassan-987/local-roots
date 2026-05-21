@@ -9,12 +9,12 @@ export function HeroSection() {
     <section 
       className="relative min-h-[46rem] flex flex-col justify-between border-b border-[#7e7468] bg-center bg-cover bg-no-repeat"
       style={{ 
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/img/Hero_img.webp')" 
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/Hero_img.webp')" 
       }}
     >
       {/* Top navigation overlay on the Hero background */}
       <div className="w-full max-w-[1200px] mx-auto px-6 py-6 flex justify-end items-center z-20">
-        <nav className="flex gap-6 text-white text-sm font-semibold tracking-wider">
+        <nav className="flex gap-6 text-white text-lg font-semibold tracking-wider" style={{ fontFamily: "'Catchy Mager', serif" }}>
           <Link href="#about" className="hover:underline transition-all">About</Link>
           <Link href="#services" className="hover:underline transition-all">Services</Link>
           <Link href="#reviews" className="hover:underline transition-all">Reviews</Link>
@@ -68,7 +68,7 @@ export function HeroSection() {
         {/* Brand logo overlay */}
         <motion.div 
           className="my-8 max-w-[280px] md:max-w-[320px]"
-          initial={{ clipPath: 'inset(0 100% 0 0)' }}
+          initial={{ clipPath: 'inset(0 0 0 100%)' }}
           animate={{ clipPath: 'inset(0 0 0 0)' }}
           transition={{ duration: 1.5, delay: 0.6, ease: [0.65, 0, 0.35, 1] }}
         >
@@ -84,7 +84,8 @@ export function HeroSection() {
 
           <Link
             href="#contact"
-            className="inline-block bg-white text-black hover:bg-[#ae9573] hover:text-white transition-all duration-300 font-bold tracking-[0.2em] px-8 py-4 text-xs md:text-sm shadow-md border border-gray-200"
+            className="inline-block bg-white !text-black hover:bg-[#ae9573] hover:text-white transition-all duration-300 font-bold tracking-[0.2em] px-8 py-4 text-xs md:text-sm shadow-md border border-gray-200"
+            style={{ color: 'black' }}
           >
             BOOK A FREE ESTIMATE
           </Link>

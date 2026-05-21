@@ -30,7 +30,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="text-2xl text-black font-semibold mb-8" style={{fontFamily: "'Arial', sans-serif"}}>
+            <h3 className="text-2xl md:text-3xl text-black font-normal mb-8" style={{fontFamily: "'Arial', sans-serif"}}>
               Contact Information
             </h3>
             <ul className="space-y-6 text-[1rem] text-black">
@@ -61,7 +61,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="text-2xl text-black font-semibold mb-6">
+            <h3 className="text-2xl md:text-3xl text-black font-normal mb-6" style={{fontFamily: "'Arial', sans-serif"}}>
               Office Hours
             </h3>
             <div className="space-y-6 text-[1rem] text-black">
@@ -88,7 +88,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="text-3xl text-black font-semibold mb-6">
+            <h3 className="text-2xl md:text-3xl text-black font-normal mb-6" style={{fontFamily: "'Arial', sans-serif"}}>
               Follow Us
             </h3>
             <div className="flex gap-6 mb-12">

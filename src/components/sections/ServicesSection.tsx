@@ -44,7 +44,7 @@ export function ServicesSection() {
                 transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div className="space-y-4">
-                  <h3 className="font-heading text-xl md:text-2xl text-[#27231f] font-semibold">
+                  <h3 className="text-xl md:text-2xl text-[#27231f] font-semibold" style={{ fontFamily: "'Arial', sans-serif" }}>
                     {service.title}
                   </h3>
                   <p className="text-sm text-[#564f46] leading-relaxed">
@@ -75,7 +75,7 @@ export function ServicesSection() {
                 transition={{ duration: 0.8, delay: (index + 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div className="space-y-4">
-                  <h3 className="font-heading text-xl md:text-2xl text-[#27231f] font-semibold">
+                  <h3 className="text-xl md:text-2xl text-[#27231f] font-semibold" style={{ fontFamily: "'Arial', sans-serif" }}>
                     {service.title}
                   </h3>
                   <p className="text-sm text-[#564f46] leading-relaxed">
