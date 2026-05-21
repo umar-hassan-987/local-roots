@@ -1,24 +1,34 @@
+"use client";
+
 import Link from "next/link";
 import { reviewCards } from "@/data/homepage";
+import { motion } from "framer-motion";
 
 export function ReviewsSection() {
   return (
-    <section id="reviews" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center">
+    <section id="reviews" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         {/* Headings */}
-        <h2 
-          className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
-          style={{
-           fontFamily: "'Catchy Mager', serif",
-            letterSpacing: "-0.04em",
-            lineHeight: "0.9"
-         }}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
-          Heard Around the Neighborhood:
-        </h2>
-        <p className="text-lg md:text-2xl text-[#27231f] mb-12 font-medium">
-          Neighbors trust us!
-        </p>
+          <h2 
+            className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
+            style={{
+             fontFamily: "'Catchy Mager', serif",
+              letterSpacing: "-0.04em",
+              lineHeight: "0.9"
+           }}
+          >
+            Heard Around the Neighborhood:
+          </h2>
+          <p className="text-lg md:text-2xl text-[#27231f] mb-12 font-medium">
+            Neighbors trust us!
+          </p>
+        </motion.div>
 
         {/* 3x2 Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left items-stretch">
@@ -29,9 +39,13 @@ export function ReviewsSection() {
             const fontSize = isVeryLong ? "text-[0.8rem]" : isLong ? "text-[0.9rem]" : "text-[1.05rem]";
 
             return (
-              <article
+              <motion.article
                 key={index}
                 className="bg-white border-[3px] border-black rounded-[2.5rem] p-6 flex flex-col shadow-sm relative min-h-[220px] h-full"
+                initial={{ clipPath: 'inset(0 100% 0 0)' }}
+                whileInView={{ clipPath: 'inset(0 0 0 0)' }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: index * 0.1, ease: [0.65, 0, 0.35, 1] }}
               >
                 {/* Stylized "99" Quote Mark - Mirrored */}
                 <div className="text-[#ae9573] mb-3 scale-x-[-1] w-fit">
@@ -69,13 +83,19 @@ export function ReviewsSection() {
                     </div>
                   </div>
                 </div>
-              </article>
+              </motion.article>
             );
           })}
         </div>
 
         {/* Tan Button at the bottom */}
-        <div className="mt-16 flex justify-center">
+        <motion.div 
+          className="mt-16 flex justify-center"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <Link
             href="/reviews"
             className="inline-flex flex-col items-center justify-center bg-[#c2a37d] hover:bg-[#b0926b] text-black font-bold tracking-[0.1em] px-6 md:px-12 py-6 transition-all duration-300 shadow-md border border-[#a88e6a] w-full max-w-[600px] leading-tight"
@@ -83,7 +103,7 @@ export function ReviewsSection() {
             <span className="text-sm md:text-xl uppercase text-center">CLICK HERE TO SEE ALL OF</span>
             <span className="text-sm md:text-xl uppercase text-center">OUR 5 STAR GOOGLE REVIEWS</span>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

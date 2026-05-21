@@ -1,22 +1,35 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 px-6 bg-[#d2c7ba]">
+    <section id="contact" className="py-20 px-6 bg-[#d2c7ba] overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
-        <h2 className="font-heading text-4xl md:text-7xl text-black text-center font-normal mb-16"
+        <motion.h2 className="font-heading text-4xl md:text-7xl text-black text-center font-normal mb-16"
           style={{
            fontFamily: "'Catchy Mager', serif",
             letterSpacing: "-0.04em",
             lineHeight: "0.9"
          }}
+         initial={{ x: -30, opacity: 0 }}
+         whileInView={{ x: 0, opacity: 1 }}
+         viewport={{ once: true }}
+         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
           Contact Us
-        </h2>
+        </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           {/* Column 1: Contact Information */}
-          <div className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]">
+          <motion.div 
+            className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]"
+            initial={{ x: -30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h3 className="text-2xl text-black font-semibold mb-8" style={{fontFamily: "'Arial', sans-serif"}}>
               Contact Information
             </h3>
@@ -38,10 +51,16 @@ export function ContactSection() {
                 </a>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Column 2: Office Hours */}
-          <div className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]">
+          <motion.div 
+            className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]"
+            initial={{ x: -30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h3 className="text-2xl text-black font-semibold mb-6">
               Office Hours
             </h3>
@@ -59,10 +78,16 @@ export function ContactSection() {
                 <p className="text-[1.1rem]">10:00 am to 2:00 pm</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Column 3: Follow Us */}
-          <div className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]">
+          <motion.div 
+            className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]"
+            initial={{ x: -30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h3 className="text-3xl text-black font-semibold mb-6">
               Follow Us
             </h3>
@@ -81,7 +106,7 @@ export function ContactSection() {
             >
               Tag us in your photos!
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
