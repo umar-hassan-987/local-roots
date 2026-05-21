@@ -87,50 +87,18 @@ export const reviewCards: ReviewCard[] = [
 ];
 
 export const workImages: WorkImage[] = [
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDv1CPcfNast_48egAi2Rsu6WTpSqkeOcF8FTX-tG4uhlBMUXBKhdEc5igQHz9euZIiLUs01JeB8EtzKtFG4LMrmSUo_HHj02V5PL8CTONWd4IxCtTlRSmCj16rd8Wv7ODzYpeSrIU0IItHk3Hc4AL4DgHkMIu7wwmf_meDVBqkB-bDZNGMN6TeujmVveUIwY_fuFcLaX5MrouIXORApqZZukDS132nYcCaZ0HvhjYaBM6aMiLJQSDy6a4jTovhkFryV44oRFCPn84",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDaP-xVvkAd48Tou4Ie-6IE9pMVBG60QtjG4CfzAj_UbMTba9qiNSQ7GpG8QpNmK-aFLdjREB-ciSsT3UEU27Trw-0ju0qScxRov6Zsp0yRTdWz88p24z3qwAtiXk5PiuX48i2QtWIernMdHKB9C6FjLEUXXzHzJQTmJNmCBaz9qdSH4ZCeA2Z4E0qqrZdt-YNyoFWmaO9dzf5dwlZF-mH90iX9Hc8SA6yemv4JuLCGkAw_BELsInTQaGNHaQ_41TocJWYFKerxemo",
-  },
-  {
-    src: "/img/width_1600 (1).webp",
-  },
-  {
-    src: "/img/width_1600 (2).webp",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDEyHMaNN4gCO8P97FHInE3SeLQVHnS33U8hClSbrurXKrSanazjnDt-DnpkPIxvrb3MEk-MNXwCDmsTHYLTpP40Wtu79RMHUbajgwLCIYjlaacWt146SGv_g6xjOVv4nTpEDwK4URfWWNeXHCzkkJEPfG1Mxn3L9PRRS1E50mdzd83ts3a0EVzGd1kb0eqIh1Xhvna0MJv25WS7hoauiuzjGtglVhKIgPuAzYnSd2DGpZ1aWqKTB-fov5CVXE7BzGZOr-0SWpdfsM",
-    caption: "Before",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDQ0H2c5tA-ESqNJvYpooQqdbEDp_0YAGLMi2g9HlXtPUUlqd_P80JUj761utDuxzfUAuDIxjx69aNTMIkkzJM6NuDXnigsLT8Zzu-DOkVJgdB6o2cjPCMOZgXpb7UADEwlIMbQna0rnqTgSQAc7xkNxFKD0zrbtGlp7gKAdFC0wxInhLatKzQspyLD1uGbZO7JblZvVR8tqvfF0B-C76-l2ZnI4POTbCGrvuh572MRTF6x3s8wK2F3k3Zvn15g8Cz3XMdE55QnehA",
-    caption: "After",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6j8DKxaNKFDge5g-5MAv7H5EILKmhKjs8dftDn1-Hr68VEysEcz_vQ61sApjPeaWtWCMQnGMifspptB7pfCnKq8S5MISlZaeqVqqwdDitH8nMHoE1H6EAjOnzZUbWnIc-r2tB71XPeJMMa8SsdVnFOy78g9NIbqWjTQTMw6rXLqBDMIgyYQadmj_nY-pzNlCFefjB_8pO6WU7j32Dvt2r3nHKAIrdJSne8LgFROdmj3Jk7L1oaFM3zchFZQJEVYSnj6QessXfaw0",
-    caption: "Before",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuChKRFgbUX9QTjJVD_yYMLNi669LC4TEvCiqyySr90xGxyoWIj82JAWB9qrnlMu_7WFzNbx_U-eYdzaPUOJZGmrO1x-aUuBDzDNV2zca37S2hmOR1lmkgcX6Pc8walTFvFU1VcLsBjpGpOv7XqjBb_C7AP8jglK4YmbwdinXdIfJp_LPSKA9k4qTJtMDxz5uPkUsp1G8nfVG15ulATdNBpHB6T8KgNOCKXNlpJmjmCEAa3Ca1ZlO6zFfp0sQD-I_h2hXZ-SIDj_iuA",
-    caption: "After",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDYST_TTqbqeHLA9zQh92WiLabXNpw9jOMXA-Pd1Tj1Ox7an6PKaUkoasFtbAuLzWPFD6L82XUI_rL-rP7Lyx5GwvwweDGV4x5ZOy9zgxNNPfGg1-votCi9Cy10OqnSLF_uSKiKWzPm2_s4y6QaK-whQL-ZJTgrnE-UelVxrccddrjA3chwlYtG_52aZ5hk-5TO_70FGHr91DzHOEIAxA49vRrk9_ugyVhlGnfND7mne2rwvcsWOyXRj6KoKtvbcIlnUA7-p7chYHE",
-    caption: "Before",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0uSKbYN9H9MMNIQ_-XmAxiBrIjVlKHBjlEmyp_wMkErEwFzB16EtNDlNBG2U_mbuTcktMeeb_3IAlieHu-bEfTRAOoluWeZLqfjtHMDI4GFv1wffXfZkxfSziolkPr9WnTR3JVjnCqJMGmb23YgHgbOzYKhOws1MHD5Fy5akjQxs4iVuh8ttT-j5bo1FXqVoe6VGOk3S_HYii7dL8pbXEO6ohKpX9sVUFnJp_b5CAkSeYLwSiC_8FtEygxTbWvdRI8y8JYYOD1nUhc",
-    caption: "After",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBjrL4-O7nKwyHrZw_LW4JYsRKRhhZ6lc7extyF963TaMIzzB-8E672lLMZ897m15FkS23GKvnzQc6FtOnQfBVVLy0LKmVc1hWl4flzfkHvq_NlOSYgSEuQ5untGgG6GN2D-Xu3eZkYQmLGNduNzzp1tggj0BsdaDtuHfTRzkNomZm7g3n7dCcMlhx-Hp6187Rp8YzKVmXe0efbvvn4SRTQUWPFHEzOPBJ52N8rSVbYHz5molAtMHK8Uwq9D64QkJHkdRZFAYbLQLo",
-    caption: "Before",
-  },
-  {
-    src: "/img/width_1600 (3).webp",
-    caption: "After",
-  },
+  { src: "/ourwork/1.png" },
+  { src: "/ourwork/2.png" },
+  { src: "/ourwork/3.webp" },
+  { src: "/ourwork/4.png" },
+  { src: "/ourwork/5.png", caption: "Before" },
+  { src: "/ourwork/6.png", caption: "After" },
+  { src: "/ourwork/7.png", caption: "Before" },
+  { src: "/ourwork/8.png", caption: "After" },
+  { src: "/ourwork/9.png", caption: "Before" },
+  { src: "/ourwork/10.png", caption: "After" },
+  { src: "/ourwork/11.png", caption: "Before" },
+  { src: "/ourwork/12.png", caption: "After" },
 ];
 
 export const contactColumns: ContactColumn[] = [

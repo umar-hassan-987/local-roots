@@ -3,7 +3,12 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[46rem] flex flex-col justify-between hero border-b border-[#7e7468]">
+    <section 
+      className="relative min-h-[46rem] flex flex-col justify-between border-b border-[#7e7468] bg-center bg-cover bg-no-repeat"
+      style={{ 
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/img/Hero_img.webp')" 
+      }}
+    >
       {/* Top navigation overlay on the Hero background */}
       <div className="w-full max-w-[1200px] mx-auto px-6 py-6 flex justify-end items-center z-20">
         <nav className="flex gap-6 text-white text-sm font-semibold tracking-wider">
