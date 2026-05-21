@@ -1,93 +1,73 @@
-import Link from "next/link";
+"use client";
+
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
-import { reviewCards } from "@/data/homepage";
+import { ReviewsSection } from "@/components/sections/ReviewsSection";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function ReviewsPage() {
   return (
     <div className="site-shell bg-[#fafaf4] min-h-screen flex flex-col justify-between">
       <SiteHeader active="reviews" />
-
-      {/* Hero Section */}
-      <section className="bg-[#0b5710] text-white py-16 md:py-24 px-6 md:px-12 text-center">
-        <div className="max-w-[800px] mx-auto space-y-4">
-          <span className="text-[#ae9573] text-xs font-bold uppercase tracking-[0.2em] block">
-            NEIGHBORS TRUST US
-          </span>
-          <h1 className="font-heading text-4xl md:text-6xl font-normal leading-tight">
-            Heard Around the Neighborhood
-          </h1>
-          <p className="text-[#eee8df] text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
-            See what our residential and commercial clients across Brevard and Indian River Counties have to say about our lawn care, cleanups, and tree services.
-          </p>
-        </div>
-      </section>
-
-      {/* Reviews Grid */}
-      <main className="flex-grow py-20 px-6 md:px-12 max-w-[1100px] mx-auto space-y-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-          {reviewCards.map((review, index) => (
-            <article
-              key={index}
-              className="bg-white border border-[#cdbca5] rounded-[2rem] p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              {/* Gold Quote Mark */}
-              <div className="text-[#ae9573] text-5xl font-serif leading-none mb-2">
-                “
-              </div>
-
-              {/* Review Text */}
-              <p className="text-sm text-[#564f46] italic leading-relaxed mb-6 flex-grow">
-                {review.text}
-              </p>
-
-              {/* Bottom Meta */}
-              <div className="border-t border-[#eee8df] pt-4 flex justify-between items-end">
-                <div className="space-y-1">
-                  <p className="text-sm font-bold text-[#27231f]">
-                    {review.name}
-                  </p>
-                  <p className="text-xs text-[#7e7468]">
-                    {review.date}
-                  </p>
-                </div>
-
-                {/* Stars */}
-                <div className="flex gap-0.5 text-[#f3a531] text-lg font-bold">
-                  ★ ★ ★ ★ ★
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Google Reviews CTA */}
-        <div className="text-center py-6 bg-[#eee8df] border border-[#cdbca5] rounded-sm">
-          <a
-            href="https://google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#ae9573] hover:bg-[#8e7553] text-white font-bold tracking-[0.1em] px-8 py-4 text-xs md:text-sm uppercase transition-all duration-300 shadow-sm border border-[#7f6843] max-w-full text-center"
+      
+      <main className="flex-grow">
+        {/* Page Hero Section */}
+        <section 
+          className="relative py-16 md:py-24 px-6 text-center bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: "linear-gradient(rgba(11, 87, 16, 0.85), rgba(11, 87, 16, 0.85)), url('/img/width_1600 (2).webp')" 
+          }}
+        >
+          <motion.div 
+            className="max-w-[800px] mx-auto space-y-4 relative z-10 text-white"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            CLICK HERE TO SEE ALL OF OUR 5 STAR GOOGLE REVIEWS
-          </a>
+            <span className="text-[#ae9573] text-xs font-bold uppercase tracking-[0.2em] block">
+              NEIGHBORS TRUST US
+            </span>
+            <h1 className="font-heading text-4xl md:text-7xl font-normal leading-tight" style={{ fontFamily: "'Catchy Mager', serif" }}>
+              Heard Around the Neighborhood
+            </h1>
+          </motion.div>
+        </section>
+
+        {/* The Original Reviews Section (Main Grid) */}
+        <div className="pb-20">
+          <ReviewsSection hideHeading={true} />
         </div>
 
-        {/* Leave a Review CTA Box */}
-        <section className="bg-white border border-[#cdbca5] p-8 md:p-12 text-center rounded-sm max-w-[700px] mx-auto space-y-6 shadow-sm">
-          <span className="text-4xl">💬</span>
-          <h2 className="font-heading text-2xl md:text-3xl text-[#27231f] font-normal">
-            How did we do?
-          </h2>
-          <p className="text-sm text-[#564f46] leading-relaxed max-w-md mx-auto">
-            We value direct feedback and use it to keep our service consistent, responsive, and easy to trust. Let us know how we can keep serving you.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-[#27231f] hover:bg-[#ae9573] text-white hover:text-[#27231f] font-bold tracking-[0.15em] px-8 py-4 text-xs uppercase transition-all duration-300 shadow-sm border border-[#27231f]"
+        {/* "How did we do?" Ending Section */}
+        <section className="py-20 px-6 bg-[#f8f5ef] border-t border-[#eee8df]">
+          <motion.div 
+            className="max-w-[800px] mx-auto bg-white border border-[#cdbca5] p-10 md:p-16 text-center space-y-8 shadow-sm rounded-sm"
+            initial={{ scale: 0.95, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            LEAVE A REVIEW
-          </Link>
+            <div className="flex justify-center">
+                <span className="text-5xl text-[#006c00]">💬</span>
+            </div>
+            <div className="space-y-4">
+                <h2 className="font-heading text-3xl md:text-5xl text-[#27231f] font-normal">
+                  How did we do?
+                </h2>
+                <p className="text-[#564f46] text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
+                  We take pride in our work and value your feedback. Let us know about your experience with Local Roots Property Maintenance.
+                </p>
+            </div>
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="inline-block bg-[#ae9573] hover:bg-[#8e7553] text-white font-bold tracking-[0.15em] px-10 py-4 text-xs uppercase transition-all duration-300 shadow-sm"
+              >
+                Leave a Review
+              </Link>
+            </div>
+          </motion.div>
         </section>
       </main>
 

@@ -3,23 +3,29 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export function ContactSection() {
+interface ContactSectionProps {
+  hideHeading?: boolean;
+}
+
+export function ContactSection({ hideHeading = false }: ContactSectionProps) {
   return (
     <section id="contact" className="py-20 px-6 bg-[#d2c7ba] overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
-        <motion.h2 className="font-heading text-4xl md:text-7xl text-black text-center font-normal mb-16"
-          style={{
-           fontFamily: "'Catchy Mager', serif",
-            letterSpacing: "-0.04em",
-            lineHeight: "0.9"
-         }}
-         initial={{ x: -30, opacity: 0 }}
-         whileInView={{ x: 0, opacity: 1 }}
-         viewport={{ once: true }}
-         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        >
-          Contact Us
-        </motion.h2>
+        {!hideHeading && (
+          <motion.h2 className="font-heading text-4xl md:text-7xl text-black text-center font-normal mb-16"
+            style={{
+             fontFamily: "'Catchy Mager', serif",
+              letterSpacing: "-0.04em",
+              lineHeight: "0.9"
+           }}
+           initial={{ x: -30, opacity: 0 }}
+           whileInView={{ x: 0, opacity: 1 }}
+           viewport={{ once: true }}
+           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            Contact Us
+          </motion.h2>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           {/* Column 1: Contact Information */}
@@ -74,7 +80,7 @@ export function ContactSection() {
                 <p className="text-[1.1rem]">8:00 am to 2:00 pm</p>
               </div>
               <div>
-                <p className="font-medium">Saturday</p>
+                <p className="font-medium">Sunday</p>
                 <p className="text-[1.1rem]">10:00 am to 2:00 pm</p>
               </div>
             </div>
@@ -112,4 +118,3 @@ export function ContactSection() {
     </section>
   );
 }
-

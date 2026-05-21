@@ -27,22 +27,11 @@ export function SiteHeader({ active }: SiteHeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm border-b border-[#eee8df] bg-[#fafaf4]/95 backdrop-blur-md">
-      {/* Top Utility Bar */}
-      <div className="hidden md:flex justify-between items-center bg-[#0b5710] text-[#f2f7eb] text-xs font-semibold px-12 py-2 tracking-wider">
-        <div className="flex items-center gap-2">
-          <span>📞</span>
-          <a href="tel:321-372-9462" className="hover:underline">321-372-9462</a>
-        </div>
-        <div className="flex items-center gap-2">
-          <span>🌴</span>
-          <span>Serving Brevard &amp; Indian River Counties</span>
-        </div>
-      </div>
-
       {/* Main Header Row */}
       <div className="max-w-[1100px] mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Brand */}
-        <Link href="/" className="font-heading text-xl md:text-2xl font-bold tracking-wide text-[#006c00] hover:text-[#ae9573] transition-colors duration-200">
+        <Link href="/" className="font-heading text-xl md:text-2xl font-bold tracking-wide text-[#006c00] hover:text-[#ae9573] transition-colors duration-200"
+        style={{ fontFamily: "'Catchy Mager', serif" }}>
           Local Roots
         </Link>
 
@@ -65,12 +54,14 @@ export function SiteHeader({ active }: SiteHeaderProps) {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Link
-            href="/contact"
+          <a
+            href="https://form.jotform.com/233315126308044"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#ae9573] hover:bg-[#8e7553] text-white text-xs font-bold tracking-[0.15em] uppercase px-5 py-3 border border-[#7f6843] transition-all duration-300 shadow-sm"
           >
             GET A FREE QUOTE
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -104,19 +95,15 @@ export function SiteHeader({ active }: SiteHeaderProps) {
             
             {/* Mobile Utility Info */}
             <div className="border-t border-[#eee8df] pt-4 mt-2 space-y-3">
-              <a href="tel:321-372-9462" className="flex items-center gap-2 text-sm text-[#564f46] font-semibold">
-                <span>📞</span> 321-372-9462
-              </a>
-              <div className="flex items-center gap-2 text-xs text-[#7e7468]">
-                <span>🌴</span> Serving Brevard &amp; Indian River Counties
-              </div>
-              <Link
-                href="/contact"
+              <a
+                href="https://form.jotform.com/233315126308044"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="block text-center bg-[#ae9573] hover:bg-[#8e7553] text-white text-xs font-bold tracking-[0.15em] uppercase py-3 border border-[#7f6843] transition-all"
               >
                 GET A FREE QUOTE
-              </Link>
+              </a>
             </div>
           </nav>
         </div>

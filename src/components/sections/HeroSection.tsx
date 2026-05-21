@@ -14,12 +14,12 @@ export function HeroSection() {
     >
       {/* Top navigation overlay on the Hero background */}
       <div className="w-full max-w-[1200px] mx-auto px-6 py-6 flex justify-end items-center z-20">
-        <nav className="flex gap-6 text-white text-lg font-semibold tracking-wider" style={{ fontFamily: "'Catchy Mager', serif" }}>
-          <Link href="#about" className="hover:underline transition-all">About</Link>
-          <Link href="#services" className="hover:underline transition-all">Services</Link>
-          <Link href="#reviews" className="hover:underline transition-all">Reviews</Link>
-          <Link href="#work" className="hover:underline transition-all">Our Work</Link>
-          <Link href="#contact" className="hover:underline transition-all">Contact</Link>
+        <nav className="flex gap-8 text-white text-lg font-semibold tracking-wider" style={{ fontFamily: "'Catchy Mager', serif" }}>
+          <Link href="/about" className="hover:underline transition-all">About</Link>
+          <Link href="/services" className="hover:underline transition-all">Services</Link>
+          <Link href="/reviews" className="hover:underline transition-all">Reviews</Link>
+          <Link href="/work" className="hover:underline transition-all">Our Work</Link>
+          <Link href="/contact" className="hover:underline transition-all">Contact</Link>
         </nav>
       </div>
 
@@ -68,7 +68,7 @@ export function HeroSection() {
         {/* Brand logo overlay */}
         <motion.div 
           className="my-8 max-w-[280px] md:max-w-[320px]"
-          initial={{ clipPath: 'inset(0 0 0 100%)' }}
+          initial={{ clipPath: 'inset(0 100% 0 0)' }}
           animate={{ clipPath: 'inset(0 0 0 0)' }}
           transition={{ duration: 1.5, delay: 0.6, ease: [0.65, 0, 0.35, 1] }}
         >
@@ -81,14 +81,15 @@ export function HeroSection() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 1, ease: [0.22, 1, 0.36, 1] }}
         >
-
-          <Link
-            href="#contact"
+          <a
+            href="https://form.jotform.com/233315126308044"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-white !text-black hover:bg-[#ae9573] hover:text-white transition-all duration-300 font-bold tracking-[0.2em] px-8 py-4 text-xs md:text-sm shadow-md border border-gray-200"
             style={{ color: 'black' }}
           >
             BOOK A FREE ESTIMATE
-          </Link>
+          </a>
         </motion.div>
       </div>
 

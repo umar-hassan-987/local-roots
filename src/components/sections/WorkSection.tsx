@@ -11,7 +11,7 @@ export function WorkSection() {
     return (
       <motion.div 
         className={`overflow-hidden border border-[#cdbca5] relative bg-gray-100 group ${className || "aspect-[4/3]"}`}
-        initial={{ scale: 0.9, opacity: 0 }}
+        initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: (index % 6) * 0.05, ease: [0.22, 1, 0.36, 1] }}
@@ -41,7 +41,7 @@ export function WorkSection() {
             letterSpacing: "-0.04em",
             lineHeight: "0.9"
          }}
-         initial={{ scale: 0.9, opacity: 0 }}
+         initial={{ scale: 0.8, opacity: 0 }}
          whileInView={{ scale: 1, opacity: 1 }}
          viewport={{ once: true }}
          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}

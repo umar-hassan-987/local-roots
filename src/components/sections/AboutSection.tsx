@@ -4,7 +4,11 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 import { aboutParagraphs } from "@/data/homepage";
 import { motion } from "framer-motion";
 
-export function AboutSection() {
+interface AboutSectionProps {
+  hideHeading?: boolean;
+}
+
+export function AboutSection({ hideHeading = false }: AboutSectionProps) {
   return (
     <section id="about" className="py-20 px-6 md:px-12 bg-[#fafaf4] border-b border-[#eee8df]">
       <motion.div 
@@ -16,9 +20,11 @@ export function AboutSection() {
       >
         {/* Left Column: About Us Text */}
         <div className="md:col-span-7 space-y-6">
-          <h2 className="font-heading text-4xl md:text-5xl text-[#27231f] font-normal relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[1px] after:bg-[#ae9573]">
-            About Us
-          </h2>
+          {!hideHeading && (
+            <h2 className="font-heading text-4xl md:text-5xl text-[#27231f] font-normal relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[1px] after:bg-[#ae9573]">
+              About Us
+            </h2>
+          )}
           <div className="space-y-4 text-[#564f46] leading-relaxed text-sm md:text-base">
             {aboutParagraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>

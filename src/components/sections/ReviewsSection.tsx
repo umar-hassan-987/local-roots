@@ -4,31 +4,37 @@ import Link from "next/link";
 import { reviewCards } from "@/data/homepage";
 import { motion } from "framer-motion";
 
-export function ReviewsSection() {
+interface ReviewsSectionProps {
+  hideHeading?: boolean;
+}
+
+export function ReviewsSection({ hideHeading = false }: ReviewsSectionProps) {
   return (
     <section id="reviews" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         {/* Headings */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <h2 
-            className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
-            style={{
-             fontFamily: "'Catchy Mager', serif",
-              letterSpacing: "-0.04em",
-              lineHeight: "0.9"
-           }}
+        {!hideHeading && (
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            Heard Around the Neighborhood:
-          </h2>
-          <p className="text-lg md:text-2xl text-[#27231f] mb-12 font-medium">
-            Neighbors trust us!
-          </p>
-        </motion.div>
+            <h2 
+              className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
+              style={{
+               fontFamily: "'Catchy Mager', serif",
+                letterSpacing: "-0.04em",
+                lineHeight: "0.9"
+             }}
+            >
+              Heard Around the Neighborhood:
+            </h2>
+            <p className="text-lg md:text-2xl text-[#27231f] mb-12 font-medium">
+              Neighbors trust us!
+            </p>
+          </motion.div>
+        )}
 
         {/* 3x2 Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left items-stretch">
