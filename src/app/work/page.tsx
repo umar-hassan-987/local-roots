@@ -3,8 +3,6 @@
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { workImages } from "@/data/homepage";
-import { ContactSection } from "@/components/sections/ContactSection";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function WorkPage() {
@@ -33,7 +31,7 @@ export default function WorkPage() {
               Our Recent Projects
             </h1>
             <p className="text-[#eee8df] text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
-              Take a look at some of the transformations we've achieved for our clients across Brevard & Indian River Counties. From regular maintenance to complete property overhauls.
+              Take a look at some of the transformations we&apos;ve achieved for our clients across Brevard &amp; Indian River Counties. From regular maintenance to complete property overhauls.
             </p>
           </motion.div>
         </section>

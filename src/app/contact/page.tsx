@@ -82,7 +82,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-[#eee8df] text-lg md:text-xl max-w-xl mx-auto font-light leading-relaxed">
-              Tell us about your property. We'll get back to you fast — usually the same day.
+              Tell us about your property. We&apos;ll get back to you fast — usually the same day.
             </p>
           </motion.div>
         </section>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                 </ul>
                 <div className="pt-6 border-t border-white/20">
                   <p className="text-[#eee8df] italic font-light">
-                    "We take pride in every property we touch. Your satisfaction is our root priority."
+                    &quot;We take pride in every property we touch. Your satisfaction is our root priority.&quot;
                   </p>
                 </div>
               </div>

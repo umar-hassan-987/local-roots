@@ -3,7 +3,6 @@
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { AboutSection } from "@/components/sections/AboutSection";
-import { ContactSection } from "@/components/sections/ContactSection";
 import { motion } from "framer-motion";
 
 const values = [
@@ -141,7 +140,7 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="text-[#564f46] text-lg md:text-xl leading-relaxed font-light">
-              "To provide the highest quality property maintenance services with a personal touch. We believe in treating every lawn as if it were our own, ensuring our community remains beautiful, one property at a time."
+              &quot;To provide the highest quality property maintenance services with a personal touch. We believe in treating every lawn as if it were our own, ensuring our community remains beautiful, one property at a time.&quot;
             </p>
             <div className="pt-4">
               <span className="inline-block w-12 h-1 bg-[#ae9573]"></span>

@@ -4,32 +4,32 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 import { workImages } from "@/data/homepage";
 import { motion } from "framer-motion";
 
-export function WorkSection() {
-  const ImageBox = ({ index, className }: { index: number; className?: string }) => {
-    const img = workImages[index];
-    if (!img) return null;
-    return (
-      <motion.div 
-        className={`overflow-hidden border border-[#cdbca5] relative bg-gray-100 group ${className || "aspect-[4/3]"}`}
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: (index % 6) * 0.05, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <img src={img.src} alt={`Work ${index + 1}`} className="w-full h-full object-cover" />
-        {img.caption && (
-          <div className="absolute bottom-[5%] left-[5%] w-[35%] max-w-[160px] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] select-none pointer-events-none">
-            <img 
-              src={img.caption === "Before" ? "/ourwork/before.png" : "/ourwork/after.png"} 
-              alt={img.caption} 
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        )}
-      </motion.div>
-    );
-  };
+const ImageBox = ({ index, className }: { index: number; className?: string }) => {
+  const img = workImages[index];
+  if (!img) return null;
+  return (
+    <motion.div 
+      className={`overflow-hidden border border-[#cdbca5] relative bg-gray-100 group ${className || "aspect-[4/3]"}`}
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: (index % 6) * 0.05, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <img src={img.src} alt={`Work ${index + 1}`} className="w-full h-full object-cover" />
+      {img.caption && (
+        <div className="absolute bottom-[5%] left-[5%] w-[35%] max-w-[160px] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] select-none pointer-events-none">
+          <img 
+            src={img.caption === "Before" ? "/ourwork/before.png" : "/ourwork/after.png"} 
+            alt={img.caption} 
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      )}
+    </motion.div>
+  );
+};
 
+export function WorkSection() {
   return (
     <section id="work" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center overflow-hidden">
       <div className="max-w-[1100px] mx-auto">

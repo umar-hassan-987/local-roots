@@ -63,7 +63,7 @@ export function ReviewsSection({ hideHeading = false }: ReviewsSectionProps) {
                 {/* Review Text */}
                 <div className="flex-grow flex items-start">
                   <p className={`${fontSize} text-black leading-tight mb-4 font-semibold italic`}>
-                    "{review.text}"
+                    &quot;{review.text}&quot;
                   </p>
                 </div>
 
