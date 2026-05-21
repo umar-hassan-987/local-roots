@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Local Roots Property Maintenance</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fafaf4",
+                        "on-surface": "#1a1c19",
+                        "primary-container": "#28861e",
+                        "secondary-fixed-dim": "#ffb77e",
+                        "surface-dim": "#dadad5",
+                        "primary-fixed": "#99f983",
+                        "outline-variant": "#bfcab7",
+                        "secondary": "#914d00",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454743",
+                        "secondary-fixed": "#ffdcc3",
+                        "inverse-primary": "#7ddc6a",
+                        "tertiary-fixed": "#e2e3dd",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "on-secondary-fixed": "#2f1500",
+                        "on-primary-fixed-variant": "#005300",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "tertiary": "#5a5d58",
+                        "secondary-container": "#fc9024",
+                        "surface-container-high": "#e8e8e3",
+                        "inverse-surface": "#2f312e",
+                        "inverse-on-surface": "#f1f1ec",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#7ddc6a",
+                        "surface": "#fafaf4",
+                        "outline": "#707a6a",
+                        "surface-container-low": "#f4f4ee",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "surface-tint": "#046e02",
+                        "surface-container": "#eeeee9",
+                        "on-error": "#ffffff",
+                        "primary": "#006c00",
+                        "surface-container-highest": "#e3e3de",
+                        "on-surface-variant": "#404a3b",
+                        "on-background": "#1a1c19",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fafaf4",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e3e3de",
+                        "on-secondary-container": "#643300",
+                        "on-tertiary-container": "#fcfdf7",
+                        "on-primary-fixed": "#002200",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#f8ffef",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#737571"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "100px",
+                        "stack-md": "16px",
+                        "margin-desktop": "80px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-low shadow-sm shadow-[0px_4px_20px_rgba(0,0,0,0.05)] docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1280px] mx-auto">
+<!-- Brand -->
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed hover:text-secondary transition-colors duration-200" href="#">
+                Local Roots
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200" href="#">Services</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200" href="#">Reviews</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200" href="#">Our Work</a>
+<!-- Active Item -->
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 translate-y-px transition-all duration-100" href="#">Contact Us</a>
+</nav>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="text-on-surface font-label-bold text-label-bold flex items-center gap-2 hover:text-primary transition-colors" href="tel:321-372-9462">
+<span class="material-symbols-outlined text-[20px]">call</span>
+                    321-372-9462
+                </a>
+<button class="bg-secondary hover:bg-secondary-container text-on-secondary font-label-bold text-label-bold py-3 px-6 rounded-lg transition-all shadow-sm hover:shadow-md active:translate-y-px">
+                    Get a Free Quote
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-primary text-on-primary py-[80px] md:py-[100px] px-margin-mobile md:px-margin-desktop text-center">
+<div class="max-w-[800px] mx-auto space-y-stack-md">
+<span class="font-label-bold text-label-bold text-primary-fixed uppercase tracking-widest block">No Obligation — Always Free</span>
+<h1 class="font-headline-xl text-headline-xl">Get Your Free Estimate</h1>
+<p class="font-body-lg text-body-lg text-primary-container-on opacity-90 max-w-[600px] mx-auto">
+                    Tell us about your property and what you need. We'll get back to you fast — usually the same day.
+                </p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Form -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-8 border border-outline-variant/30">
+<h2 class="font-headline-lg text-headline-lg mb-2">Request a Free Quote</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Fill out the form below and we'll prepare a free, no-pressure estimate for your property.</p>
+<form class="space-y-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">FIRST NAME <span class="text-error">*</span></label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors" placeholder="Jane" type="text"/>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">LAST NAME <span class="text-error">*</span></label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors" placeholder="Smith" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">EMAIL ADDRESS <span class="text-error">*</span></label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors" placeholder="jane@example.com" type="email"/>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">PHONE NUMBER <span class="text-error">*</span></label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors" placeholder="(321) 555-0000" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">CITY / LOCATION <span class="text-error">*</span></label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors" placeholder="Orlando, FL" type="text"/>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">PROPERTY TYPE</label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors appearance-none">
+<option>Select property type...</option>
+<option>Residential</option>
+<option>Commercial</option>
+</select>
+</div>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">PROPERTY ADDRESS <span class="text-error">*</span></label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors" placeholder="123 Main St, Orlando, FL 32801" type="text"/>
+<p class="font-body-md text-[14px] text-on-surface-variant">The address of the property where service is needed.</p>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">SERVICE NEEDED <span class="text-error">*</span></label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors appearance-none">
+<option>Select a service...</option>
+<option>Lawn Mowing</option>
+<option>Landscaping</option>
+<option>Tree Service</option>
+</select>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-bold text-label-bold text-on-surface block">TELL US ABOUT YOUR PROPERTY</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:border-2 focus:border-primary focus:ring-0 transition-colors" placeholder="Describe your property, yard size, current condition, or anything else that helps us understand what you need..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary hover:bg-secondary-container text-on-secondary font-label-bold text-label-bold py-4 px-6 rounded-lg transition-all shadow-sm hover:shadow-md active:translate-y-px" type="submit">
+                            Submit My Free Quote Request
+                        </button>
+<p class="text-center font-body-md text-[14px] text-on-surface-variant mt-4">No commitment required. We'll reach out to discuss your needs.</p>
+</form>
+</div>
+<!-- Right Column: Sidebar Info -->
+<div class="lg:col-span-4 space-y-stack-lg">
+<!-- Contact Info Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-8 border border-outline-variant/30">
+<h3 class="font-headline-md text-headline-md mb-6">Contact Us Directly</h3>
+<div class="space-y-stack-md">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div>
+<p class="font-label-bold text-[12px] tracking-wider text-on-surface-variant uppercase mb-1">Phone</p>
+<p class="font-body-md text-body-md font-bold text-on-surface">(321) 372-9462</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-bold text-[12px] tracking-wider text-on-surface-variant uppercase mb-1">Email</p>
+<p class="font-body-md text-body-md font-bold text-on-surface">LocalRootsBrevard@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<p class="font-label-bold text-[12px] tracking-wider text-on-surface-variant uppercase mb-1">Service Area</p>
+<p class="font-body-md text-body-md font-bold text-on-surface">Brevard &amp; Indian River Counties</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div>
+<p class="font-label-bold text-[12px] tracking-wider text-on-surface-variant uppercase mb-1">Hours</p>
+<p class="font-body-md text-body-md font-bold text-on-surface">Mon – Sat: 7am – 7pm</p>
+<p class="font-body-md text-[14px] text-on-surface-variant mt-1">Sunday: 10am - 3pm</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Benefits Card -->
+<div class="bg-primary-container text-on-primary-container rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-8">
+<h3 class="font-headline-md text-[20px] font-bold mb-6">Why Choose Local Roots?</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-inverse-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Licensed &amp; insured in Florida
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-inverse-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Free estimates — no pressure
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-inverse-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Same-day response on quotes
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-inverse-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Serving Brevard &amp; Indian River
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-inverse-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Residential &amp; commercial
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-inverse-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Flexible scheduling
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low/50">
+<div class="max-w-[800px] mx-auto text-center mb-12">
+<span class="font-label-bold text-label-bold text-primary uppercase tracking-widest block mb-2">Common Questions</span>
+<h2 class="font-headline-lg text-headline-lg">Frequently Asked Questions</h2>
+</div>
+<div class="max-w-[800px] mx-auto space-y-4">
+<!-- Accordion Item 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-sm">
+<button class="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-label-bold text-[16px] text-on-surface">How quickly can you give me an estimate?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5">
+<p class="font-body-md text-body-md text-on-surface-variant">We typically respond to quote requests within the same business day and can often provide an estimate over the phone or schedule an on-site visit within 24-48 hours depending on your location.</p>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-sm">
+<button class="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-label-bold text-[16px] text-on-surface">Are you licensed and insured in Florida?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5">
+<p class="font-body-md text-body-md text-on-surface-variant">Yes, Local Roots Property Maintenance is fully licensed and insured to operate in the state of Florida, specifically serving Brevard and Indian River counties. We can provide documentation upon request.</p>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-sm">
+<button class="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-label-bold text-[16px] text-on-surface">Do you offer recurring maintenance plans?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5">
+<p class="font-body-md text-body-md text-on-surface-variant">Absolutely. We offer weekly, bi-weekly, and monthly maintenance plans tailored to your property's specific needs to keep it looking pristine year-round.</p>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-sm">
+<button class="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-label-bold text-[16px] text-on-surface">What areas do you serve?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5">
+<p class="font-body-md text-body-md text-on-surface-variant">We primarily serve residential and commercial properties throughout Brevard County and Indian River County. If you are slightly outside this area, please contact us to see if we can accommodate you.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-secondary-fixed dark:text-secondary full-width bottom-0">
+<div class="w-full py-section-padding px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-[1280px] mx-auto bg-inverse-surface text-inverse-on-surface flat no shadows">
+<!-- Brand Column -->
+<div class="space-y-stack-md col-span-1 md:col-span-1">
+<div class="text-headline-md font-headline-md text-inverse-on-surface font-bold">Local Roots</div>
+<p class="font-body-md text-[14px] text-inverse-on-surface opacity-80">Your trusted local crew for lawn care, landscaping, and tree service across Brevard &amp; Indian River Counties.</p>
+<div class="flex gap-4 pt-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+</div>
+</div>
+<!-- Links Column 1 -->
+<div class="col-span-1 space-y-4">
+<h4 class="font-label-bold text-label-bold uppercase tracking-wider text-inverse-on-surface">Services</h4>
+<nav class="flex flex-col space-y-3">
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Lawn Care</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Landscaping</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Tree Service</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Mulching &amp; Edging</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Irrigation</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Cleanup &amp; Hauling</a>
+</nav>
+</div>
+<!-- Links Column 2 -->
+<div class="col-span-1 space-y-4">
+<h4 class="font-label-bold text-label-bold uppercase tracking-wider text-inverse-on-surface">Company</h4>
+<nav class="flex flex-col space-y-3">
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Home</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">About Us</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Gallery</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Reviews</a>
+<a class="font-body-md text-[14px] text-secondary-fixed-dim hover:text-secondary-fixed transition-opacity duration-200" href="#">Contact Us</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Get a Free Quote</a>
+</nav>
+</div>
+<!-- Contact/JSON Links Column -->
+<div class="col-span-1 space-y-4">
+<h4 class="font-label-bold text-label-bold uppercase tracking-wider text-inverse-on-surface">Contact Info</h4>
+<nav class="flex flex-col space-y-3">
+<span class="font-body-md text-[14px] text-inverse-on-surface opacity-80 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">call</span> Phone: 321-372-9462</span>
+<span class="font-body-md text-[14px] text-inverse-on-surface opacity-80 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">schedule</span> Office Hours: Mon-Fri 8am-5pm</span>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200 flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[16px]">map</span> Service Areas</a>
+<a class="font-body-md text-[14px] text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200 flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[16px]">privacy_tip</span> Privacy Policy</a>
+</nav>
+<div class="pt-4">
+<button class="bg-secondary hover:bg-secondary-container text-on-secondary font-label-bold py-2 px-4 rounded-lg transition-all text-[14px]">
+                        Get a Free Quote
+                    </button>
+</div>
+</div>
+</div>
+<!-- Copyright Banner -->
+<div class="border-t border-white/10 py-6 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="font-body-md text-[12px] text-inverse-on-surface opacity-60">© 2024 Local Roots Property Maintenance. Serving Brevard &amp; Indian River Counties.</p>
+<div class="flex gap-4">
+<a class="font-body-md text-[12px] text-inverse-on-surface opacity-60 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-[12px] text-inverse-on-surface opacity-60 hover:opacity-100" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            // Toggle visibility
+            content.classList.toggle('hidden');
+            
+            // Rotate icon
+            if (content.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+                button.classList.remove('text-primary');
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+                button.classList.add('text-primary');
+            }
+        }
+    </script>
+</body></html>

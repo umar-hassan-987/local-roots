@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Work - Local Roots Property Maintenance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&amp;family=Montserrat:wght@700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;  /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fafaf4",
+                      "on-surface": "#1a1c19",
+                      "primary-container": "#28861e",
+                      "secondary-fixed-dim": "#ffb77e",
+                      "surface-dim": "#dadad5",
+                      "primary-fixed": "#99f983",
+                      "outline-variant": "#bfcab7",
+                      "secondary": "#914d00",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#454743",
+                      "secondary-fixed": "#ffdcc3",
+                      "inverse-primary": "#7ddc6a",
+                      "tertiary-fixed": "#e2e3dd",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "on-secondary-fixed": "#2f1500",
+                      "on-primary-fixed-variant": "#005300",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#1a1c19",
+                      "tertiary": "#5a5d58",
+                      "secondary-container": "#fc9024",
+                      "surface-container-high": "#e8e8e3",
+                      "inverse-surface": "#2f312e",
+                      "inverse-on-surface": "#f1f1ec",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#7ddc6a",
+                      "surface": "#fafaf4",
+                      "outline": "#707a6a",
+                      "surface-container-low": "#f4f4ee",
+                      "tertiary-fixed-dim": "#c6c7c2",
+                      "surface-tint": "#046e02",
+                      "surface-container": "#eeeee9",
+                      "on-error": "#ffffff",
+                      "primary": "#006c00",
+                      "surface-container-highest": "#e3e3de",
+                      "on-surface-variant": "#404a3b",
+                      "on-background": "#1a1c19",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#fafaf4",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e3e3de",
+                      "on-secondary-container": "#643300",
+                      "on-tertiary-container": "#fcfdf7",
+                      "on-primary-fixed": "#002200",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#f8ffef",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#737571"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding": "100px",
+                      "stack-md": "16px",
+                      "margin-desktop": "80px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-bold": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-xl": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopAppBar Shared Component -->
+<header class="bg-surface dark:bg-surface-container-low shadow-[0px_4px_20px_rgba(0,0,0,0.05)] w-full top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1280px] mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">
+                Local Roots
+            </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-200" href="#">Services</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-200" href="#">Reviews</a>
+<a aria-current="page" class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-secondary transition-colors duration-200" href="#">Our Work</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-200" href="#">Contact Us</a>
+</nav>
+<div class="hidden lg:flex items-center gap-stack-md">
+<span class="font-label-bold text-on-surface-variant">321-372-9462</span>
+<button class="bg-secondary text-on-secondary font-label-bold px-6 py-3 rounded hover:bg-secondary-container transition-colors duration-200 active:translate-y-px">
+                    Get a Free Quote
+                </button>
+</div>
+<!-- Mobile Menu Button (Placeholder) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Page Header -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop text-center bg-surface-container-lowest">
+<div class="max-w-[800px] mx-auto">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-lg">Our Recent Projects</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Take a look at some of the transformations we've achieved for our clients across Brevard &amp; Indian River Counties. 
+                From regular maintenance to complete property overhauls.
+            </p>
+</div>
+</section>
+<!-- Before & After Showcase -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg text-center">Transformations</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<!-- B&A Item 1 -->
+<div class="bg-surface-container-lowest rounded-lg shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="relative h-[300px] sm:h-[400px]">
+<img alt="Before" class="absolute inset-0 w-full h-full object-cover" data-alt="An overgrown residential front yard with tall weeds, patchy grass, and unkempt bushes in front of a modern Florida home on a sunny day. The scene looks neglected and in need of professional landscaping." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEyHMaNN4gCO8P97FHInE3SeLQVHnS33U8hClSbrurXKrSanazjnDt-DnpkPIxvrb3MEk-MNXwCDmsTHYLTpP40Wtu79RMHUbajgwLCIYjlaacWt146SGv_g6xjOVv4nTpEDwK4URfWWNeXHCzkkJEPfG1Mxn3L9PRRS1E50mdzd83ts3a0EVzGd1kb0eqIh1Xhvna0MJv25WS7hoauiuzjGtglVhKIgPuAzYnSd2DGpZ1aWqKTB-fov5CVXE7BzGZOr-0SWpdfsM"/>
+<div class="absolute top-4 left-4 bg-surface text-on-surface px-4 py-2 font-label-bold rounded shadow-sm">
+                            Before
+                        </div>
+</div>
+<div class="relative h-[300px] sm:h-[400px]">
+<img alt="After" class="absolute inset-0 w-full h-full object-cover" data-alt="The same residential front yard after a complete landscaping overhaul. The grass is now perfectly manicured, green, and lush. Bushes are neatly trimmed, and the property looks pristine and welcoming under bright Florida sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ0H2c5tA-ESqNJvYpooQqdbEDp_0YAGLMi2g9HlXtPUUlqd_P80JUj761utDuxzfUAuDIxjx69aNTMIkkzJM6NuDXnigsLT8Zzu-DOkVJgdB6o2cjPCMOZgXpb7UADEwlIMbQna0rnqTgSQAc7xkNxFKD0zrbtGlp7gKAdFC0wxInhLatKzQspyLD1uGbZO7JblZvVR8tqvfF0B-C76-l2ZnI4POTbCGrvuh572MRTF6x3s8wK2F3k3Zvn15g8Cz3XMdE55QnehA"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-4 py-2 font-label-bold rounded shadow-sm">
+                            After
+                        </div>
+</div>
+<div class="p-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Full Property Overhaul in Melbourne</h3>
+<p class="font-body-md text-on-surface-variant">Complete clean-up, mowing, edging, and fresh mulch installation.</p>
+</div>
+</div>
+<!-- B&A Item 2 -->
+<div class="bg-surface-container-lowest rounded-lg shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="relative h-[300px] sm:h-[400px]">
+<img alt="Before" class="absolute inset-0 w-full h-full object-cover" data-alt="A large, damaged tree leaning dangerously close to a residential property. The surrounding area is cluttered with fallen branches and debris, presenting a hazardous situation requiring immediate professional attention." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6j8DKxaNKFDge5g-5MAv7H5EILKmhKjs8dftDn1-Hr68VEysEcz_vQ61sApjPeaWtWCMQnGMifspptB7pfCnKq8S5MISlZaeqVqqwdDitH8nMHoE1H6EAjOnzZUbWnIc-r2tB71XPeJMMa8SsdVnFOy78g9NIbqWjTQTMw6rXLqBDMIgyYQadmj_nY-pzNlCFefjB_8pO6WU7j32Dvt2r3nHKAIrdJSne8LgFROdmj3Jk7L1oaFM3zchFZQJEVYSnj6QessXfaw0"/>
+<div class="absolute top-4 left-4 bg-surface text-on-surface px-4 py-2 font-label-bold rounded shadow-sm">
+                            Before
+                        </div>
+</div>
+<div class="relative h-[300px] sm:h-[400px]">
+<img alt="After" class="absolute inset-0 w-full h-full object-cover" data-alt="The same residential area after tree removal. The space is now clear, safe, and open. The stump has been ground down, and the yard is completely free of debris, showcasing a clean, professional job." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChKRFgbUX9QTjJVD_yYMLNi669LC4TEvCiqyySr90xGxyoWIj82JAWB9qrnlMu_7WFzNbx_U-eYdzaPUOJZGmrO1x-aUuBDzDNV2zca37S2hmOR1lmkgcX6Pc8walTFvFU1VcLsBjpGpOv7XqjBb_C7AP8jglK4YmbwdinXdIfJp_LPSKA9k4qTJtMDxz5uPkUsp1G8nfVG15ulATdNBpHB6T8KgNOCKXNlpJmjmCEAa3Ca1ZlO6zFfp0sQD-I_h2hXZ-SIDj_iuA"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-4 py-2 font-label-bold rounded shadow-sm">
+                            After
+                        </div>
+</div>
+<div class="p-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Tree Removal &amp; Stump Grinding</h3>
+<p class="font-body-md text-on-surface-variant">Safe removal of hazardous trees and complete stump grinding for a clean finish.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Bento Grid -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-[1280px] mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg text-center">Recent Landscaping Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md auto-rows-[300px]">
+<!-- Gallery Item 1 (Spans 2 columns on desktop) -->
+<div class="md:col-span-2 rounded-lg overflow-hidden relative group shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<img alt="Commercial Mowing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sprawling commercial property with perfectly edged sidewalks and freshly mowed vibrant green grass. Palm trees dot the landscape, conveying a high-end, professionally maintained Florida commercial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv1CPcfNast_48egAi2Rsu6WTpSqkeOcF8FTX-tG4uhlBMUXBKhdEc5igQHz9euZIiLUs01JeB8EtzKtFG4LMrmSUo_HHj02V5PL8CTONWd4IxCtTlRSmCj16rd8Wv7ODzYpeSrIU0IItHk3Hc4AL4DgHkMIu7wwmf_meDVBqkB-bDZNGMN6TeujmVveUIwY_fuFcLaX5MrouIXORApqZZukDS132nYcCaZ0HvhjYaBM6aMiLJQSDy6a4jTovhkFryV44oRFCPn84"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-stack-lg">
+<span class="text-on-primary font-headline-md">Commercial Maintenance</span>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="rounded-lg overflow-hidden relative group shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<img alt="Mulch Installation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up of a residential flower bed with freshly laid dark mulch, vibrant tropical plants, and a clean, sharp edge separating it from the lawn. The lighting is warm and sunny." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYST_TTqbqeHLA9zQh92WiLabXNpw9jOMXA-Pd1Tj1Ox7an6PKaUkoasFtbAuLzWPFD6L82XUI_rL-qP7Lyx5GwvwweDGV4x5ZOy9zgxNNPfGg1-votCi9Cy10OqnSLF_uSKiKWzPm2_s4y6QaK-whQL-ZJTgrnE-UelVxrccddrjA3chwlYtG_52aZ5hk-5TO_70FGHr91DzHOEIAxA49vRrk9_ugyVhlGnfND7mne2rwvcsWOyXRj6KoKtvbcIlnUA7-p7chYHE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-stack-lg">
+<span class="text-on-primary font-headline-md">Mulch Installation</span>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="rounded-lg overflow-hidden relative group shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<img alt="Tree Trimming" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional landscaper carefully trimming tall palm trees in a residential neighborhood using specialized equipment. The scene highlights safety, expertise, and Florida's unique vegetation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0uSKbYN9H9MMNIQ_-XmAxiBrIjVlKHBjlEmyp_wMkErEwFzB16EtNDlNBG2U_mbuTcktMeeb_3IAlieHu-bEfTRAOoluWeZLqfjtHMDI4GFv1wffXfZkxfSziolkPr9WnTR3JVjnCqJMGmb23YgHgbOzYKhOws1MHD5Fy5akjQxs4iVuh8ttVVs0TnehIyWQkfgPHLdBZm7-LtcWveYxYJdsvseZCwagFlDTSZfu7lqdQaEAZYKrOG6ZcPc-_s3OvJ1lRzS81514"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-stack-lg">
+<span class="text-on-primary font-headline-md">Palm Trimming</span>
+</div>
+</div>
+<!-- Gallery Item 4 (Spans 2 columns on desktop) -->
+<div class="md:col-span-2 rounded-lg overflow-hidden relative group shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<img alt="Residential Lawn Care" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A beautiful, expansive backyard featuring a perfectly striped mowed lawn, neat garden beds, and a patio area. The lawn looks incredibly healthy and robust, typical of expert residential care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKq07kZgmh53HYZBRTxPm3KNCGDPDEMfeiJtwwAjso1twMYpY2P0eT9ZMgC-mPCLQjp1TxcHv1hHX28l9HRqCMjb9xF0i1tb_NlyW0jYU1aXROSJbAi3y2NmzSfXh1mDI30pUnY3HtdaN6hKlQQwzPRP2b1xJzFvCj7cdkv_uI6IrqRzQttT-j5bo1FXqVoe6VGOk3S_HYii7dL8pbXEO6ohKpX9sVUFnJp_b5CAkSeYLwSiC_8FtEygxTbWvdRI8y8JYYOD1nUhc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-stack-lg">
+<span class="text-on-primary font-headline-md">Residential Lawn Care</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-[1000px] mx-auto bg-surface-variant rounded-xl p-stack-lg md:p-section-padding text-center shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Ready for your transformation?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-[600px] mx-auto">
+                Let us bring out the best in your property. Contact us today for a reliable, professional assessment.
+            </p>
+<button class="bg-secondary text-on-secondary font-label-bold px-8 py-4 rounded hover:bg-secondary-container transition-colors duration-200 active:translate-y-px text-lg shadow-sm">
+                Get a Free Estimate
+            </button>
+</div>
+</section>
+<!-- Footer Shared Component -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest full-width bottom-0 bg-inverse-surface text-inverse-on-surface flat no shadows w-full py-section-padding px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-[1280px] mx-auto">
+<div class="col-span-1 md:col-span-4 mb-stack-lg">
+<span class="text-headline-md font-headline-md text-inverse-on-surface font-bold">Local Roots</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary-fixed dark:text-secondary mb-stack-md">Contact</h4>
+<ul class="flex flex-col gap-stack-sm">
+<li><a class="font-body-md text-body-md text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Phone: 321-372-9462</a></li>
+<li><a class="font-body-md text-body-md text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Office Hours: Mon-Fri 8am-5pm</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary-fixed dark:text-secondary mb-stack-md">Links</h4>
+<ul class="flex flex-col gap-stack-sm">
+<li><a class="font-body-md text-body-md text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Service Areas</a></li>
+<li><a class="font-body-md text-body-md text-inverse-on-surface opacity-80 hover:text-secondary-fixed transition-opacity duration-200" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 mt-stack-lg pt-stack-lg border-t border-outline/30 text-center md:text-left">
+<p class="font-body-md text-body-md text-inverse-on-surface opacity-60">
+                © 2024 Local Roots Property Maintenance. Serving Brevard &amp; Indian River Counties.
+            </p>
+</div>
+</footer>
+</body></html>

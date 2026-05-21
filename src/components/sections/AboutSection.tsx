@@ -3,19 +3,27 @@ import { aboutParagraphs } from "@/data/homepage";
 
 export function AboutSection() {
   return (
-    <section id="about" className="section about">
-      <div>
-        <h3>About Us</h3>
-        {aboutParagraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
+    <section id="about" className="py-20 px-6 md:px-12 bg-[#fafaf4] border-b border-[#eee8df]">
+      <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        {/* Left Column: About Us Text */}
+        <div className="md:col-span-7 space-y-6">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#27231f] font-normal relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[1px] after:bg-[#ae9573]">
+            About Us
+          </h2>
+          <div className="space-y-4 text-[#564f46] leading-relaxed text-sm md:text-base">
+            {aboutParagraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
 
-      <BrandLogo
-        subtitle="PROPERTY MAINTENANCE LLC"
-        phone="321.372.9462"
-        footerNote="IN GOD WE TRUST"
-      />
+        {/* Right Column: Brand Logo */}
+        <div className="md:col-span-5 flex justify-center">
+          <div className="w-full max-w-[360px] p-6 bg-white border border-[#cdbca5] shadow-sm rounded-lg">
+            <BrandLogo rootClassName="bg-transparent" />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

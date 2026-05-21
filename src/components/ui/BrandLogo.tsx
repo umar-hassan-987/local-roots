@@ -1,26 +1,30 @@
 type BrandLogoProps = {
-  subtitle: string;
-  phone: string;
-  footerNote?: string;
   rootClassName?: string;
   className?: string;
+  alt?: string;
 };
 
 export function BrandLogo({
-  subtitle,
-  phone,
-  footerNote,
   rootClassName = "about-logo",
   className,
+  alt = "Local Roots Property Maintenance Logo",
 }: BrandLogoProps) {
-  const composedClassName = [rootClassName, className].filter(Boolean).join(" ");
+  const composedClassName = [
+    "flex items-center justify-center p-2",
+    rootClassName,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <div className={composedClassName}>
-      <p className="logo-title">LOCAL ROOTS</p>
-      <p className="logo-sub">{subtitle}</p>
-      <p className="logo-phone">{phone}</p>
-      {footerNote ? <p className="logo-sub">{footerNote}</p> : null}
+      <img
+        src="/img/logo.png"
+        alt={alt}
+        className="max-w-full h-auto object-contain mx-auto"
+        style={{ maxHeight: "160px" }}
+      />
     </div>
   );
 }

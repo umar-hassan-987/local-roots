@@ -1,16 +1,44 @@
+import Link from "next/link";
+
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { SiteHeader } from "@/components/site/SiteHeader";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { workImages } from "@/data/homepage";
 
-export function WorkSection() {
+export default function WorkPage() {
   return (
-    <section id="work" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center">
-      <div className="max-w-[1100px] mx-auto">
-        {/* Section Heading */}
-        <h2 className="font-heading text-4xl md:text-5xl text-[#27231f] font-normal mb-12">
-          Our Work
-        </h2>
+    <div className="site-shell bg-[#fafaf4] min-h-screen flex flex-col justify-between">
+      <SiteHeader active="work" />
 
-        {/* Custom Bento / Gallery Grid */}
+      {/* Hero Section */}
+      <section className="bg-[#0b5710] text-white py-16 md:py-24 px-6 md:px-12 text-center">
+        <div className="max-w-[800px] mx-auto space-y-4">
+          <span className="text-[#ae9573] text-xs font-bold uppercase tracking-[0.2em] block">
+            OUR PROVEN RESULTS
+          </span>
+          <h1 className="font-heading text-4xl md:text-6xl font-normal leading-tight">
+            Our Recent Projects
+          </h1>
+          <p className="text-[#eee8df] text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
+            Take a look at some of the transformations we've achieved for our clients across Brevard & Indian River Counties. From regular maintenance to complete property overhauls.
+          </p>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <main className="flex-grow py-20 px-6 md:px-12 max-w-[1100px] mx-auto w-full space-y-20">
+        
+        {/* Section Heading */}
+        <div className="text-center space-y-2">
+          <h2 className="font-heading text-3xl md:text-4xl text-[#27231f] font-normal">
+            Project Showcase
+          </h2>
+          <p className="text-sm text-[#564f46] italic">
+            A visual gallery of our lawn care, landscaping, and tree services
+          </p>
+        </div>
+
+        {/* Custom Bento / Gallery Grid (14 Items) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Row 1: Driveway & House */}
           <div className="overflow-hidden border border-[#cdbca5] relative aspect-[4/3] bg-gray-100">
@@ -87,6 +115,10 @@ export function WorkSection() {
           {/* Row 7: Brand Logo Box & Final Cleaned Area */}
           <div className="overflow-hidden border border-[#cdbca5] bg-white p-6 flex flex-col justify-center items-center aspect-[4/3]">
             <BrandLogo rootClassName="bg-transparent" />
+            <div className="border-t border-[#eee8df] pt-4 mt-4 w-full text-center">
+              <p className="text-sm font-bold text-[#27231f]">LOCAL ROOTS PROPERTY MAINTENANCE</p>
+              <p className="text-xs text-[#7e7468] tracking-widest mt-1">IN GOD WE TRUST</p>
+            </div>
           </div>
           <div className="overflow-hidden border border-[#cdbca5] relative aspect-[4/3] bg-gray-100">
             <img src="/img/width_900.webp" alt="Final Cleanup" className="w-full h-full object-cover" />
@@ -95,7 +127,28 @@ export function WorkSection() {
             </span>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Bottom CTA Banner */}
+        <section className="bg-[#eee8df] border border-[#cdbca5] p-8 md:p-16 rounded-sm text-center space-y-6">
+          <h2 className="font-heading text-3xl md:text-4xl text-[#27231f] font-normal">
+            Ready for your transformation?
+          </h2>
+          <p className="text-[#564f46] text-sm md:text-base max-w-lg mx-auto leading-relaxed font-light">
+            Let us bring out the best in your property. Contact us today for a reliable, professional assessment and a practical lawn, landscape, or tree service estimate.
+          </p>
+          <div className="pt-2">
+            <Link
+              href="/contact"
+              className="inline-block bg-[#ae9573] hover:bg-[#8e7553] text-white font-bold tracking-[0.15em] px-8 py-4 text-xs uppercase transition-all duration-300 shadow-sm border border-[#7f6843]"
+            >
+              Get a Free Estimate
+            </Link>
+          </div>
+        </section>
+
+      </main>
+
+      <SiteFooter />
+    </div>
   );
 }
