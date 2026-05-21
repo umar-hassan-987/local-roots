@@ -22,10 +22,23 @@ export function HeroSection() {
 
       {/* Main Hero Content */}
       <div className="flex-grow flex flex-col justify-center items-center text-center text-white px-4 py-8 z-10">
-        <h1 className="font-heading text-6xl md:text-8xl tracking-wide font-normal drop-shadow-md">
+        <h1 className="font-heading text-6xl md:text-8xl tracking-wide font-normal drop-shadow-md"
+          style={{
+           fontFamily: "'Catchy Mager', serif",
+            letterSpacing: "0.09em",
+            lineHeight: "0.9"
+         }}
+      
+        >
           Local Roots
         </h1>
-        <h2 className="font-heading text-2xl md:text-3xl tracking-wider mt-2 opacity-95">
+        <h2 className="font-heading text-2xl md:text-3xl tracking-wider mt-2 opacity-95"
+        style={{
+           fontFamily: "'Catchy Mager', serif",
+            letterSpacing: "0.09em",
+            lineHeight: "0.9"
+         }}
+         >
           Property Maintenance, LLC
         </h2>
         

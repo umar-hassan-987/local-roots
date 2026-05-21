@@ -25,7 +25,14 @@ export function WorkSection() {
     <section id="work" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center">
       <div className="max-w-[1100px] mx-auto">
         {/* Section Heading */}
-        <h2 className="font-heading text-4xl md:text-5xl text-[#27231f] font-normal mb-12">
+        <h2 
+          className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
+          style={{
+           fontFamily: "'Catchy Mager', serif",
+            letterSpacing: "-0.04em",
+            lineHeight: "0.9"
+         }}
+        >
           Our Work
         </h2>
 

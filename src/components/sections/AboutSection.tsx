@@ -19,8 +19,12 @@ export function AboutSection() {
 
         {/* Right Column: Brand Logo */}
         <div className="md:col-span-5 flex justify-center">
-          <div className="w-full max-w-[400px] p-6 ">
-            <BrandLogo rootClassName="bg-transparent" imagesrc="/img/black-logo.png"/>
+          <div className="w-full max-w-[700px] p-6">
+            <BrandLogo 
+              rootClassName="bg-transparent" 
+              imagesrc="/img/black-logo.png"
+              maxHeight="450px"
+            />
           </div>
         </div>
       </div>

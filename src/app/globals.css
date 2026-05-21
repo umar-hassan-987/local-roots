@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Catchy Mager';
+  src: url('/fonts/catchy-mager.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #fafaf4;
   --ink: #27231f;
@@ -13,6 +21,8 @@
   --color-background: var(--background);
   --color-foreground: var(--ink);
   --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-catchy: 'Catchy Mager', cursive;
 }
 
 body {

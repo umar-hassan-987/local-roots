@@ -1,0 +1,14 @@
+hero- heading rise up
+	logo wipe left
+
+about us-  rise up
+
+services- rise down
+	cards - blur
+
+reviews rise up
+	review cards- wipe
+
+our work- pop up
+
+contact - pan left to rights

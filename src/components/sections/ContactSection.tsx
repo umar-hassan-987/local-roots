@@ -4,14 +4,20 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-20 px-6 bg-[#d2c7ba]">
       <div className="max-w-[1200px] mx-auto">
-        <h2 className="font-heading text-6xl md:text-8xl text-black text-center font-normal mb-16">
+        <h2 className="font-heading text-4xl md:text-7xl text-black text-center font-normal mb-16"
+          style={{
+           fontFamily: "'Catchy Mager', serif",
+            letterSpacing: "-0.04em",
+            lineHeight: "0.9"
+         }}
+        >
           Contact Us
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           {/* Column 1: Contact Information */}
           <div className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]">
-            <h3 className="text-2xl text-black font-semibold mb-8">
+            <h3 className="text-2xl text-black font-semibold mb-8" style={{fontFamily: "'Arial', sans-serif"}}>
               Contact Information
             </h3>
             <ul className="space-y-6 text-[1rem] text-black">

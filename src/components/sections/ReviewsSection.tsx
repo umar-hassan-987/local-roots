@@ -6,7 +6,14 @@ export function ReviewsSection() {
     <section id="reviews" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center">
       <div className="max-w-[1200px] mx-auto">
         {/* Headings */}
-        <h2 className="font-heading text-3xl md:text-6xl text-[#27231f] font-normal mb-4 tracking-tight">
+        <h2 
+          className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
+          style={{
+           fontFamily: "'Catchy Mager', serif",
+            letterSpacing: "-0.04em",
+            lineHeight: "0.9"
+         }}
+        >
           Heard Around the Neighborhood:
         </h2>
         <p className="text-lg md:text-2xl text-[#27231f] mb-12 font-medium">

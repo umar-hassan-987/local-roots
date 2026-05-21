@@ -6,7 +6,14 @@ export function ServicesSection() {
     <section id="services" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center">
       <div className="max-w-[1100px] mx-auto">
         {/* Section Heading */}
-        <h2 className="font-heading text-4xl md:text-5xl text-[#27231f] font-normal mb-2">
+        <h2 
+          className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
+          style={{
+           fontFamily: "'Catchy Mager', serif",
+            letterSpacing: "-0.04em",
+            lineHeight: "0.9"
+         }}
+        >
           Services
         </h2>
         <p className="text-sm md:text-base text-[#564f46] italic max-w-2xl mx-auto mb-12">
