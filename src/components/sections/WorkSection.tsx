@@ -19,7 +19,7 @@ const ImageBox = ({ index, className }: { index: number; className?: string }) =
       {img.caption && (
         <div className="absolute bottom-[5%] left-[5%] w-[35%] max-w-[160px] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] select-none pointer-events-none">
           <img 
-            src={img.caption === "Before" ? "/ourwork/before.png" : "/ourwork/after.png"} 
+            src={img.caption === "Before" ? "/ourwork/Before.png" : "/ourwork/after.png"} 
             alt={img.caption} 
             className="w-full h-auto object-contain"
           />
