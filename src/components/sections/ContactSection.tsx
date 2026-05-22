@@ -9,108 +9,58 @@ interface ContactSectionProps {
 
 export function ContactSection({ hideHeading = false }: ContactSectionProps) {
   return (
-    <section id="contact" className="py-20 px-6 bg-[#d2c7ba] overflow-hidden">
-      <div className="max-w-[1200px] mx-auto">
-        {!hideHeading && (
-          <motion.h2 className="font-heading text-4xl md:text-7xl text-black text-center font-normal mb-16"
-            style={{
-             fontFamily: "'Catchy Mager', serif",
-              letterSpacing: "-0.04em",
-              lineHeight: "0.9"
-           }}
-           initial={{ x: -30, opacity: 0 }}
-           whileInView={{ x: 0, opacity: 1 }}
-           viewport={{ once: true }}
-           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Contact Us
-          </motion.h2>
-        )}
+    <section id="contact" className="py-16 px-6 bg-primary overflow-hidden">
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          {!hideHeading && (
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white">
+              Ready to Get Started?
+            </h2>
+          )}
+          <p className="text-white/80 max-w-2xl mx-auto mt-4 text-base md:text-lg">
+            Request a free estimate today. We serve Brevard &amp; Indian River
+            Counties and respond fast — usually the same day.
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          {/* Column 1: Contact Information */}
-          <motion.div 
-            className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]"
-            initial={{ x: -30, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        <motion.div
+          className="flex flex-col sm:flex-row justify-center gap-4 mt-8"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        >
+          <Link
+            href="/contact"
+            className="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-accent/90 transition-all text-center"
           >
-            <h3 className="text-2xl md:text-3xl text-black font-normal mb-8" style={{fontFamily: "'Arial', sans-serif"}}>
-              Contact Information
-            </h3>
-            <ul className="space-y-6 text-[1rem] text-black">
-              <li className="flex items-center gap-4">
-                <img src="https://img.icons8.com/ios-filled/24/7e603b/marker.png" alt="Location" className="w-5 h-5 opacity-80" />
-                <span className="font-medium">Brevard & Indian River Counties</span>
-              </li>
-              <li className="flex items-center gap-4">
-                <img src="https://img.icons8.com/ios-filled/24/7e603b/phone.png" alt="Phone" className="w-5 h-5 opacity-80" />
-                <a href="tel:321-372-9462" className="hover:underline font-medium">
-                  321-372-9462
-                </a>
-              </li>
-              <li className="flex items-center gap-4">
-                <img src="https://img.icons8.com/ios-filled/24/7e603b/mail.png" alt="Email" className="w-5 h-5 opacity-80" />
-                <a href="mailto:LocalRootsBrevard@gmail.com" className="hover:underline font-medium">
-                  LocalRootsBrevard@gmail.com
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Column 2: Office Hours */}
-          <motion.div 
-            className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]"
-            initial={{ x: -30, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            Request a Free Quote
+          </Link>
+          <a
+            href="tel:3213729462"
+            className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all flex items-center justify-center gap-2"
           >
-            <h3 className="text-2xl md:text-3xl text-black font-normal mb-6" style={{fontFamily: "'Arial', sans-serif"}}>
-              Office Hours
-            </h3>
-            <div className="space-y-6 text-[1rem] text-black">
-              <div>
-                <p className="font-medium">Monday to Friday</p>
-                <p className="text-[1.1rem]">7:00 am to 7:00 pm</p>
-              </div>
-              <div>
-                <p className="font-medium">Saturday</p>
-                <p className="text-[1.1rem]">8:00 am to 2:00 pm</p>
-              </div>
-              <div>
-                <p className="font-medium">Sunday</p>
-                <p className="text-[1.1rem]">10:00 am to 2:00 pm</p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Column 3: Follow Us */}
-          <motion.div 
-            className="border border-[#a89e91] p-10 flex flex-col min-h-[300px]"
-            initial={{ x: -30, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <h3 className="text-2xl md:text-3xl text-black font-normal mb-6" style={{fontFamily: "'Arial', sans-serif"}}>
-              Follow Us
-            </h3>
-            <div className="flex gap-6 mb-12">
-              <a href="https://www.facebook.com/profile.php?id=100072010691280" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="https://img.icons8.com/ios-filled/48/7e603b/facebook-new.png" alt="Facebook" className="w-12 h-12" />
-              </a>
-              <a href="https://share.google/u0gKy3ieQN4t6Dedp" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" className="w-12 h-12 grayscale brightness-50 contrast-125" />
-              </a>
-            </div>
-            
-            <p  className="mt-auto inline-block w-full text-center border border-[#7e603b] rounded-full py-4 text-black italic font-medium ">
-              Tag us in your photos!
-            </p>
-          </motion.div>
-        </div>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              />
+            </svg>
+            (321) 372-9462
+          </a>
+        </motion.div>
       </div>
     </section>
   );
