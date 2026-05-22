@@ -16,13 +16,13 @@ export function SiteFooter() {
         </div>
 
         {/* Simple Navigation */}
-        <nav className="flex flex-wrap justify-center gap-6 text-sm font-semibold text-[#564f46]">
+        {/* <nav className="flex flex-wrap justify-center gap-6 text-sm font-semibold text-[#564f46]">
           <Link href="/about" className="hover:text-[#006c00] transition-colors">About</Link>
           <Link href="/services" className="hover:text-[#006c00] transition-colors">Services</Link>
           <Link href="/reviews" className="hover:text-[#006c00] transition-colors">Reviews</Link>
           <Link href="/work" className="hover:text-[#006c00] transition-colors">Our Work</Link>
           <Link href="/contact" className="hover:text-[#006c00] transition-colors">Contact</Link>
-        </nav>
+        </nav> */}
 
         {/* Contact Quick Info with Professional SVG Icons */}
         <div className="text-sm text-[#564f46] font-semibold space-y-3">

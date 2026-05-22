@@ -28,15 +28,15 @@ export function SiteHeader({ active }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm border-b border-[#eee8df] bg-[#fafaf4]/95 backdrop-blur-md">
       {/* Main Header Row */}
-      <div className="max-w-[1100px] mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+      <div className="max-w-[1100px] mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
         {/* Brand */}
-        <Link href="/" className="font-heading text-xl md:text-2xl font-bold tracking-wide text-[#006c00] hover:text-[#ae9573] transition-colors duration-200"
+        <Link href="/" className="font-heading text-xl lg:text-2xl font-bold tracking-wide text-[#006c00] hover:text-[#ae9573] transition-colors duration-200"
         style={{ fontFamily: "'Catchy Mager', serif" }}>
           Local Roots
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 items-center" style={{ fontFamily: "'Catchy Mager', serif" }}>
+        <nav className="hidden lg:flex gap-6 xl:gap-8 items-center" style={{ fontFamily: "'Catchy Mager', serif" }}>
           {navItems.map((item) => (
             <Link
               key={item.key}
@@ -53,12 +53,12 @@ export function SiteHeader({ active }: SiteHeaderProps) {
         </nav>
 
         {/* CTA Button */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <a
             href="https://form.jotform.com/233315126308044"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ae9573] hover:bg-[#8e7553] text-white text-xs font-bold tracking-[0.15em] uppercase px-5 py-3 border border-[#7f6843] transition-all duration-300 shadow-sm"
+            className="bg-[#ae9573] hover:bg-[#8e7553] text-white text-xs font-bold tracking-[0.15em] uppercase px-5 py-3 border border-[#7f6843] transition-all duration-300 shadow-sm whitespace-nowrap"
           >
             GET A FREE QUOTE
           </a>
@@ -67,7 +67,7 @@ export function SiteHeader({ active }: SiteHeaderProps) {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-[#27231f] hover:text-[#ae9573] focus:outline-none"
+          className="lg:hidden text-[#27231f] hover:text-[#ae9573] focus:outline-none"
           aria-label="Toggle Menu"
         >
           <span className="text-2xl">{isOpen ? "✕" : "☰"}</span>
@@ -76,7 +76,7 @@ export function SiteHeader({ active }: SiteHeaderProps) {
 
       {/* Mobile Nav Overlay */}
       {isOpen && (
-        <div className="md:hidden bg-[#fafaf4] border-t border-[#eee8df] py-4 px-6 absolute top-full left-0 w-full shadow-lg z-40 transition-all duration-300">
+        <div className="lg:hidden bg-[#fafaf4] border-t border-[#eee8df] py-4 px-6 absolute top-full left-0 w-full shadow-lg z-40 transition-all duration-300">
           <nav className="flex flex-col gap-4" style={{ fontFamily: "'Catchy Mager', serif" }}>
             {navItems.map((item) => (
               <Link
@@ -99,7 +99,6 @@ export function SiteHeader({ active }: SiteHeaderProps) {
                 href="https://form.jotform.com/233315126308044"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
                 className="block text-center bg-[#ae9573] hover:bg-[#8e7553] text-white text-xs font-bold tracking-[0.15em] uppercase py-3 border border-[#7f6843] transition-all"
               >
                 GET A FREE QUOTE

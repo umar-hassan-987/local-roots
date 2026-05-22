@@ -82,7 +82,7 @@ export default function ServicesPage() {
               Our Services
             </h1>
             <p className="text-[#eee8df] text-lg md:text-xl max-w-xl mx-auto font-light leading-relaxed">
-              Everything your property needs — lawn care, landscaping, and tree service — from one trusted, locally owned crew.
+              Everything your property needs lawn care, landscaping, and tree service from one trusted, locally owned crew.
             </p>
           </motion.div>
         </section>
@@ -218,12 +218,16 @@ export default function ServicesPage() {
               Request a free estimate today. We serve Brevard & Indian River Counties and respond fast — usually the same day.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto bg-[#ae9573] hover:bg-[#8e7553] text-white font-bold tracking-[0.15em] px-8 py-4 text-xs uppercase transition-all duration-300 shadow-sm border border-[#7f6843]"
+              
+              <a
+                href="https://form.jotform.com/233315126308044"
+                target="_blank"
+                rel="noopener noreferrer"
+                    className="w-full sm:w-auto bg-[#ae9573] hover:bg-[#8e7553] text-white font-bold tracking-[0.15em] px-8 py-4 text-xs uppercase transition-all duration-300 shadow-sm border border-[#7f6843]"
+                style={{ color: 'black' }}
               >
-                Request a Free Quote
-              </Link>
+                    Request a Free Quote
+              </a>
               <a
                 href="tel:321-372-9462"
                 className="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-black font-bold tracking-[0.15em] px-8 py-3.5 text-xs uppercase transition-all duration-300 flex items-center justify-center gap-2"

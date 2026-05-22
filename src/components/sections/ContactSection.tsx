@@ -98,10 +98,10 @@ export function ContactSection({ hideHeading = false }: ContactSectionProps) {
               Follow Us
             </h3>
             <div className="flex gap-6 mb-12">
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              <a href="https://www.facebook.com/profile.php?id=100072010691280" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <img src="https://img.icons8.com/ios-filled/48/7e603b/facebook-new.png" alt="Facebook" className="w-12 h-12" />
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              <a href="https://share.google/u0gKy3ieQN4t6Dedp" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" className="w-12 h-12 grayscale brightness-50 contrast-125" />
               </a>
             </div>

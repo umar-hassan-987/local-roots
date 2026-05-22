@@ -109,12 +109,15 @@ export function ServicesSection({ hideHeading = false }: ServicesSectionProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Link
-            href="/contact"
+          <a
+            href="https://form.jotform.com/233315126308044"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#ae9573] hover:bg-[#8e7553] text-white font-bold tracking-[0.2em] px-8 py-4 text-xs md:text-sm uppercase transition-all duration-300 shadow-sm border border-[#7f6843]"
+            style={{ color: 'black' }}
           >
             BOOK A FREE ESTIMATE
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

@@ -61,7 +61,7 @@ export default function ReviewsPage() {
             </div>
             <div className="pt-4">
               <Link
-                href="/contact"
+                href="https://share.google/u0gKy3ieQN4t6Dedp"
                 className="inline-block bg-[#ae9573] hover:bg-[#8e7553] text-white font-bold tracking-[0.15em] px-10 py-4 text-xs uppercase transition-all duration-300 shadow-sm"
               >
                 Leave a Review

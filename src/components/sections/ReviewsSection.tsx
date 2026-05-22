@@ -103,7 +103,7 @@ export function ReviewsSection({ hideHeading = false }: ReviewsSectionProps) {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link
-            href="/reviews"
+            href="https://share.google/u0gKy3ieQN4t6Dedp"
             className="inline-flex flex-col items-center justify-center bg-[#c2a37d] hover:bg-[#b0926b] text-black font-bold tracking-[0.1em] px-6 md:px-12 py-6 transition-all duration-300 shadow-md border border-[#a88e6a] w-full max-w-[600px] leading-tight"
           >
             <span className="text-sm md:text-xl uppercase text-center">CLICK HERE TO SEE ALL OF</span>

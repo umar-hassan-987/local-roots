@@ -82,7 +82,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-[#eee8df] text-lg md:text-xl max-w-xl mx-auto font-light leading-relaxed">
-              Tell us about your property. We&apos;ll get back to you fast — usually the same day.
+              Tell us about your property. We&apos;ll get back to you fast, usually the same day.
             </p>
           </motion.div>
         </section>
