@@ -31,8 +31,7 @@ export function ServicesSection({ hideHeading = false }: ServicesSectionProps) {
               Services
             </h2>
             <p className="text-sm md:text-base text-[#564f46] italic max-w-2xl mx-auto mb-12">
-              Prices remaining depends on your property condition and size. Pricing will varies on various items.
-            </p>
+              Please note pricing depends on your properties conditon and size. Pricing will vary based on various items.             </p>
           </motion.div>
         )}
 
@@ -56,9 +55,11 @@ export function ServicesSection({ hideHeading = false }: ServicesSectionProps) {
                   <p className="text-sm text-[#564f46] leading-relaxed">
                     {service.description}
                   </p>
-                  <p className="text-xs text-[#7e7468] leading-relaxed">
-                    {service.points}
-                  </p>
+                  {service.points.split('\n\n').map((point, i) => (
+                    <p key={i} className="text-sm text-[#564f46] leading-relaxed">
+                      {point}
+                    </p>
+                  ))}
                 </div>
                 <div className="border-t border-[#eee8df] pt-4 mt-6">
                   <p className="text-sm font-bold text-[#27231f] tracking-wide uppercase">
@@ -87,9 +88,11 @@ export function ServicesSection({ hideHeading = false }: ServicesSectionProps) {
                   <p className="text-sm text-[#564f46] leading-relaxed">
                     {service.description}
                   </p>
-                  <p className="text-xs text-[#7e7468] leading-relaxed">
-                    {service.points}
-                  </p>
+                  {service.points.split('\n\n').map((point, i) => (
+                    <p key={i} className="text-sm text-[#564f46] leading-relaxed">
+                      {point}
+                    </p>
+                  ))}
                 </div>
                 <div className="border-t border-[#eee8df] pt-4 mt-6">
                   <p className="text-sm font-bold text-[#27231f] tracking-wide uppercase">
