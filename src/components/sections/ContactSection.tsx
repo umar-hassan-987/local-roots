@@ -106,12 +106,9 @@ export function ContactSection({ hideHeading = false }: ContactSectionProps) {
               </a>
             </div>
             
-            <Link 
-              href="/contact"
-              className="mt-auto inline-block w-full text-center border border-[#7e603b] rounded-full py-4 text-black italic font-medium hover:bg-[#7e603b] hover:text-white transition-all duration-300"
-            >
+            <p  className="mt-auto inline-block w-full text-center border border-[#7e603b] rounded-full py-4 text-black italic font-medium ">
               Tag us in your photos!
-            </Link>
+            </p>
           </motion.div>
         </div>
       </div>
