@@ -1,19 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Inter } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 
-const displayFont = localFont({
-  src: "../../public/fonts/catchy-mager.otf",
-  variable: "--font-display",
-  weight: "400",
-  style: "normal",
-  display: "swap",
-});
-
-const bodyFont = Inter({
+const oswald = Oswald({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-oswald",
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
@@ -21,6 +12,10 @@ const bodyFont = Inter({
 export const metadata: Metadata = {
   title: "Local Roots Property Maintenance",
   description: "Landscaping and property maintenance services in Brevard County.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -29,10 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${oswald.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
