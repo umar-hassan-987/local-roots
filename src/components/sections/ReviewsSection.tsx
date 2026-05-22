@@ -1,115 +1,155 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
 import { reviewCards } from "@/data/homepage";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ReviewsSectionProps {
   hideHeading?: boolean;
+  showAll?: boolean;
 }
 
-export function ReviewsSection({ hideHeading = false }: ReviewsSectionProps) {
+export function ReviewsSection({ hideHeading = false, showAll = false }: ReviewsSectionProps) {
+  const [current, setCurrent] = useState(0);
+  const cardsPerPage = 3;
+  const totalPages = Math.ceil(reviewCards.length / cardsPerPage);
+
+  const handlePrev = () => {
+    setCurrent((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrent((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+  };
+
+  const visibleCards = showAll
+    ? reviewCards
+    : reviewCards.slice(current * cardsPerPage, current * cardsPerPage + cardsPerPage);
+
   return (
-    <section id="reviews" className="py-20 px-6 bg-[#fafaf4] border-b border-[#eee8df] text-center overflow-hidden">
-      <div className="max-w-[1200px] mx-auto">
-        {/* Headings */}
+    <section id="reviews" className="py-16 px-6 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* Heading */}
         {!hideHeading && (
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-center mb-12"
           >
-            <h2 
-              className="text-4xl md:text-7xl text-[#27231f] font-normal mb-6"
-              style={{
-               fontFamily: "'Catchy Mager', serif",
-                letterSpacing: "-0.04em",
-                lineHeight: "0.9"
-             }}
-            >
-              Heard Around the Neighborhood:
+            <span className="text-accent text-xs font-semibold uppercase tracking-widest mb-3 block">
+              What Our Clients Say
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading text-foreground">
+              Trusted by Local Homeowners
             </h2>
-            <p className="text-lg md:text-2xl text-[#27231f] mb-12 font-medium">
-              Neighbors trust us!
-            </p>
           </motion.div>
         )}
 
-        {/* 3x2 Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left items-stretch">
-          {reviewCards.map((review, index) => {
-            // Logic to reduce text size for longer reviews
-            const isLong = review.text.length > 200;
-            const isVeryLong = review.text.length > 350;
-            const fontSize = isVeryLong ? "text-[0.8rem]" : isLong ? "text-[0.9rem]" : "text-[1.05rem]";
+        {/* Carousel or Grid */}
+        <div className="relative">
+          {showAll ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {visibleCards.map((review, index) => (
+                <motion.article
+                  key={index}
+                  initial={{ clipPath: "inset(0 100% 0 0)", opacity: 0 }}
+                  whileInView={{ clipPath: "inset(0 0 0 0)", opacity: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.8, delay: (index % 3) * 0.2, ease: "easeInOut" }}
+                  className="bg-white border border-border rounded-xl p-8 flex flex-col h-auto"
+                >
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
 
-            return (
-              <motion.article
-                key={index}
-                className="bg-white border-[3px] border-black rounded-[2.5rem] p-6 flex flex-col shadow-sm relative min-h-[220px] h-full"
-                initial={{ clipPath: 'inset(0 100% 0 0)' }}
-                whileInView={{ clipPath: 'inset(0 0 0 0)' }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: index * 0.1, ease: [0.65, 0, 0.35, 1] }}
-              >
-                {/* Stylized "99" Quote Mark - Mirrored */}
-                <div className="text-[#ae9573] mb-3 scale-x-[-1] w-fit">
-                  <svg width="30" height="20" viewBox="0 0 32 24" fill="currentColor">
-                    <path d="M10 0C13 0 15 2 15 5C15 8 13 10 10 10C8.5 10 7.5 9.5 7 9C7.5 13 9 17 13 21L11 24C5 20 1 13 1 6C1 2 4 0 10 0ZM26 0C29 0 31 2 31 5C31 8 29 10 26 10C24.5 10 23.5 9.5 23 9C23.5 13 25 17 29 21L27 24C21 20 17 13 17 6C17 2 20 0 26 0Z"/>
-                  </svg>
-                </div>
-
-                {/* Review Text */}
-                <div className="flex-grow flex items-start">
-                  <p className={`${fontSize} text-black leading-tight mb-4 font-semibold italic`}>
+                  {/* Review Text - Dynamic text size, no line clamp */}
+                  <p className={`italic text-foreground/80 leading-relaxed flex-grow ${review.text.length > 200 ? 'text-sm' : 'text-base'}`}>
                     &quot;{review.text}&quot;
                   </p>
-                </div>
 
-                {/* Bottom Meta info */}
-                <div className="border-t-2 border-gray-200 pt-4 mt-auto">
-                  <div className="flex justify-between items-end">
-                    <div className="space-y-0.5">
-                      <p className="text-[1.1rem] font-bold text-black leading-tight">
-                        {review.name}
-                      </p>
-                      <p className="text-[0.85rem] font-medium text-gray-800">
-                        {review.date}
-                      </p>
-                    </div>
-
+                  {/* Reviewer Info */}
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <p className="font-semibold text-foreground">{review.name}</p>
+                    <p className="text-sm text-muted-foreground">{review.date}</p>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          ) : (
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              >
+                {visibleCards.map((review, index) => (
+                  <article
+                    key={index}
+                    className="bg-white border border-border rounded-xl p-8 flex flex-col h-auto"
+                  >
                     {/* Stars */}
-                    <div className="flex gap-0.5 text-[#f5a623]">
+                    <div className="flex gap-1 mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <svg key={i} className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                         </svg>
                       ))}
                     </div>
-                  </div>
-                </div>
-              </motion.article>
-            );
-          })}
+
+                    {/* Review Text */}
+                    <p className={`italic text-foreground/80 leading-relaxed flex-grow ${review.text.length > 200 ? 'text-sm' : 'text-base'}`}>
+                      &quot;{review.text}&quot;
+                    </p>
+
+                    {/* Reviewer Info */}
+                    <div className="mt-6 pt-4 border-t border-border">
+                      <p className="font-semibold text-foreground">{review.name}</p>
+                      <p className="text-sm text-muted-foreground">{review.date}</p>
+                    </div>
+                  </article>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          )}
         </div>
 
-        {/* Tan Button at the bottom */}
-        <motion.div 
-          className="mt-16 flex justify-center"
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <Link
-            href="https://share.google/u0gKy3ieQN4t6Dedp"
-            className="inline-flex flex-col items-center justify-center bg-[#c2a37d] hover:bg-[#b0926b] text-black font-bold tracking-[0.1em] px-6 md:px-12 py-6 transition-all duration-300 shadow-md border border-[#a88e6a] w-full max-w-[600px] leading-tight"
-          >
-            <span className="text-sm md:text-xl uppercase text-center">CLICK HERE TO SEE ALL OF</span>
-            <span className="text-sm md:text-xl uppercase text-center">OUR 5 STAR GOOGLE REVIEWS</span>
-          </Link>
-        </motion.div>
+        {/* Navigation - Only show if not showAll */}
+        {!showAll && (
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button onClick={handlePrev} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors" aria-label="Previous reviews">
+              <svg className="w-4 h-4 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <div className="flex gap-2">
+              {[...Array(totalPages)].map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-border"}`}
+                  aria-label={`Go to page ${i + 1}`}
+                />
+              ))}
+            </div>
+
+            <button onClick={handleNext} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors" aria-label="Next reviews">
+              <svg className="w-4 h-4 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

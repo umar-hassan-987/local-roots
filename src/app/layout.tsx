@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Lato, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const headingFont = Playfair_Display({
-  variable: "--font-heading",
-  subsets: ["latin"],
+const displayFont = localFont({
+  src: "../../public/fonts/catchy-mager.otf",
+  variable: "--font-display",
+  weight: "400",
+  style: "normal",
   display: "swap",
 });
 
-const bodyFont = Lato({
-  variable: "--font-body",
+const bodyFont = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
+  variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -28,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${headingFont.variable} ${bodyFont.variable} h-full antialiased`}
+      className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
