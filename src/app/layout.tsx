@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Local Roots Property Maintenance",
-    description: "Your description here",
+    title: "Local Roots Property Maintenance | Brevard County",
+    description: "Professional lawn care, landscaping, and property maintenance services in Brevard County, FL. Get a free quote today!",
     url: "https://localrootsbrevard.com",
     siteName: "Local Roots Property Maintenance",
     images: [
       {
-        url: "https://localrootsbrevard.com/img/logo.png", // your logo URL
+        url: "https://localrootsbrevard.com/img/og-logo.png", // your logo URL
         width: 1200,
         height: 630,
         alt: "Local Roots Property Maintenance Logo",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://localrootsbrevard.com/img/logo.png"],
+    images: ["https://localrootsbrevard.com/img/og-logo.png"],
   },
 };
 
