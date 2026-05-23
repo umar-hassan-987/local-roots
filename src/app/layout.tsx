@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Local Roots Property Maintenance | Brevard County",
+    title: "Local Roots Property Maintenance | Serving Brevard & Indian River Counties",
     description: "Professional lawn care, landscaping, and property maintenance services in Brevard County, FL. Get a free quote today!",
     url: "https://localrootsbrevard.com",
     siteName: "Local Roots Property Maintenance",
