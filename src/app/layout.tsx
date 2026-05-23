@@ -16,6 +16,25 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
   },
+  openGraph: {
+    title: "Local Roots Property Maintenance",
+    description: "Your description here",
+    url: "https://localrootsbrevard.com",
+    siteName: "Local Roots Property Maintenance",
+    images: [
+      {
+        url: "https://localrootsbrevard.com/img/logo.png", // your logo URL
+        width: 1200,
+        height: 630,
+        alt: "Local Roots Property Maintenance Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://localrootsbrevard.com/img/logo.png"],
+  },
 };
 
 export default function RootLayout({

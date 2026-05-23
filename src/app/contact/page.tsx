@@ -3,7 +3,14 @@
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+// ─── Replace these with your real EmailJS credentials ───────────────────────
+const EMAILJS_SERVICE_ID  = "service_gxbjsdy";
+const EMAILJS_TEMPLATE_ID = "template_sef4n9e";
+const EMAILJS_PUBLIC_KEY  = "sdSJ7thgIaQKLWZm8";
+// ─────────────────────────────────────────────────────────────────────────────
 
 const faqs = [
   {
@@ -67,9 +74,29 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function ContactPage() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you! Your quote request has been submitted. We'll get back to you soon.");
+    if (!formRef.current) return;
+
+    setStatus("sending");
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+      setStatus("success");
+      formRef.current.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -115,7 +142,7 @@ export default function ContactPage() {
                   Fill out the form below and we&apos;ll be in touch shortly.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                   {/* Row: First Name + Last Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -124,7 +151,9 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="first_name"
                         placeholder="John"
+                        required
                         className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                       />
                     </div>
@@ -134,7 +163,9 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="last_name"
                         placeholder="Smith"
+                        required
                         className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                       />
                     </div>
@@ -148,7 +179,9 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         placeholder="john@example.com"
+                        required
                         className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                       />
                     </div>
@@ -158,6 +191,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         placeholder="(321) 555-0123"
                         className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                       />
@@ -172,6 +206,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="city"
                         placeholder="Melbourne, FL"
                         className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                       />
@@ -181,7 +216,10 @@ export default function ContactPage() {
                         Property Type
                       </label>
                       <div className="relative">
-                        <select className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary appearance-none bg-white pr-10">
+                        <select
+                          name="property_type"
+                          className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary appearance-none bg-white pr-10"
+                        >
                           <option value="">Select property type</option>
                           <option value="residential">Residential</option>
                           <option value="commercial">Commercial</option>
@@ -200,6 +238,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="property_address"
                       placeholder="123 Main Street, Melbourne, FL 32901"
                       className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                     />
@@ -214,7 +253,10 @@ export default function ContactPage() {
                       Service Needed
                     </label>
                     <div className="relative">
-                      <select className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary appearance-none bg-white pr-10">
+                      <select
+                        name="service"
+                        className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary appearance-none bg-white pr-10"
+                      >
                         <option value="">Select a service</option>
                         <option value="lawn">Lawn Maintenance</option>
                         <option value="landscaping">Landscaping</option>
@@ -234,6 +276,7 @@ export default function ContactPage() {
                       Tell Us About Your Property
                     </label>
                     <textarea
+                      name="message"
                       rows={4}
                       placeholder="Describe your property, what you need done, any special considerations..."
                       className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-none"
@@ -246,7 +289,10 @@ export default function ContactPage() {
                       How Did You Hear About Us?
                     </label>
                     <div className="relative">
-                      <select className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary appearance-none bg-white pr-10">
+                      <select
+                        name="referral_source"
+                        className="w-full border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary appearance-none bg-white pr-10"
+                      >
                         <option value="">Select an option</option>
                         <option value="google">Google Search</option>
                         <option value="facebook">Facebook</option>
@@ -258,12 +304,25 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Status Messages */}
+                  {status === "success" && (
+                    <div className="rounded-lg bg-green-50 border border-green-200 px-4 py-3 text-sm text-green-700">
+                      ✅ Thank you! Your quote request has been submitted. We&apos;ll get back to you soon.
+                    </div>
+                  )}
+                  {status === "error" && (
+                    <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
+                      ❌ Something went wrong. Please try again or call us directly at (321) 372-9462.
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-accent hover:bg-accent/90 text-white py-4 rounded-lg font-semibold text-sm transition-all mt-4"
+                    disabled={status === "sending"}
+                    className="w-full bg-accent hover:bg-accent/90 text-white py-4 rounded-lg font-semibold text-sm transition-all mt-4 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Submit My Free Quote Request
+                    {status === "sending" ? "Sending…" : "Submit My Free Quote Request"}
                   </button>
                   <p className="text-xs text-muted-foreground text-center mt-2">
                     No commitment required. We&apos;ll review your info and reach out with a personalized estimate.

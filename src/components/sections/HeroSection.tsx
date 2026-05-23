@@ -54,12 +54,12 @@ export function HeroSection() {
           >
             Get a Free Quote
           </Link>
-          <Link
-            href="/services"
+            <a
+              href="tel:321-372-9462"
             className="border-2 border-white/90 text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-md text-base transition-all text-center bg-white/5 backdrop-blur-[1px]"
-          >
+            >
             Call Us Today
-          </Link>
+            </a>
         </motion.div>
       </div>
     </section>
