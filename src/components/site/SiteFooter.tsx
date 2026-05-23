@@ -5,7 +5,6 @@ const serviceLinks = [
   { label: "Landscaping", href: "/services" },
   { label: "Tree Service", href: "/services" },
   { label: "Mulching & Edging", href: "/services" },
-  { label: "Irrigation", href: "/services" },
   { label: "Cleanup & Hauling", href: "/services" },
 ];
 
